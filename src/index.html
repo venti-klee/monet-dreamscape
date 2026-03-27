@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>莫奈的画境 - Monet's Dreamscape</title>
+<!--
+  莫奈的画境 / Monet's Dreamscape v2.0
+  ======================================
+  印象派风格横版卷轴探索游戏 / Impressionist Side-scrolling Platformer
+
+  架构说明 / Architecture:
+  - index.html : UI 层级结构（本文件）
+  - style.css  : 所有样式（z-index 分层管理）
+  - game.js    : 全部游戏逻辑（~3000行，分为 9 个 Section）
+  - vo/        : 英文语音文件（edge-tts 生成）
+  - *.jpg/png  : 游戏素材（AI 生成的背景和角色贴图）
+
+  注意：不使用内联 <style>、<script> 或 onclick 属性，
+  以兼容 mule.page 等静态托管平台。
+  所有事件监听在 game.js SECTION 8 中通过 addEventListener 绑定。
+-->
+<link rel="stylesheet" href="style.css?v=4.4">
+</head>
+<body>
+
+<!-- ============================================
+     加载屏幕 / Loading Screen (z-index: 1000)
+     游戏初始化时显示，资源加载完成后淡出
+     ============================================ -->
+<div id="loading-screen">
+  <h1>莫奈的画境</h1>
+  <div class="subtitle">MONET'S DREAMSCAPE</div>
+  <div id="loading-bar-container"><div id="loading-bar"></div></div>
+  <div id="loading-text">正在唤醒画中世界...</div>
+</div>
+
+<!-- ============================================
+     主菜单 / Main Menu (z-index: 900)
+     包含：开始旅程、画作画廊、纪念品图鉴、语言切换
+     menu-canvas 用于绘制动态粒子背景
+     ============================================ -->
+<div id="main-menu">
+  <canvas id="menu-canvas"></canvas>
+  <div class="menu-title">莫奈的画境</div>
+  <div class="menu-subtitle">MONET'S DREAMSCAPE</div>
+  <button class="menu-btn" id="btn-start">开始旅程</button>
+  <button class="menu-btn" id="btn-gallery">画作画廊</button>
+  <button class="menu-btn" id="btn-album">图鉴</button>
+  <button class="lang-btn" id="btn-lang">EN</button>
+</div>
+
+<!-- ============================================
+     游戏画布 / Game Canvas
+     所有游戏画面（背景、平台、角色、特效）都渲染在此
+     ============================================ -->
+<canvas id="game-canvas"></canvas>
+
+<!-- ============================================
+     游戏 HUD / Heads-Up Display (z-index: 100)
+     左侧：关卡名称
+     右侧：收集物指示器 + 语言切换 + 暂停按钮
+     pointer-events:none 使其不阻挡画布点击
+     ============================================ -->
+<div id="game-hud">
+  <div class="hud-top">
+    <div class="hud-level" id="hud-level-name"></div>
+    <div class="hud-right">
+      <div class="hud-collectibles" id="hud-collectibles"></div>
+      <button class="hud-lang-btn" id="hud-lang-btn">EN</button>
+      <button class="hud-pause-btn" id="hud-pause-btn">⏸</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     暂停遮罩 / Pause Overlay (z-index: 750)
+     ESC 键或暂停按钮触发，包含继续和返回菜单选项
+     使用 backdrop-filter: blur 营造毛玻璃效果
+     ============================================ -->
+<div id="pause-overlay">
+  <div class="pause-content">
+    <h2 id="pause-title">暂停</h2>
+    <button class="pause-btn" id="btn-resume">继续游戏</button>
+    <button class="pause-btn" id="btn-back-menu">返回主菜单</button>
+  </div>
+</div>
+
+<!-- ============================================
+     背包遮罩 / Backpack Overlay (z-index: 740)
+     Tab/B 键打开，显示当前关卡收集的钥匙和纪念品
+     ============================================ -->
+<div id="backpack-overlay">
+  <div class="backpack-content">
+    <h2 id="backpack-title">背包</h2>
+    <div class="backpack-grid" id="backpack-grid"></div>
+    <div class="backpack-hint">(Tab)</div>
+  </div>
+</div>
+
+<!-- ============================================
+     提示浮层 / Hint Overlay (z-index: 150)
+     位置触发的游戏提示文字，3.5秒后自动消失
+     ============================================ -->
+<div id="hint-overlay"></div>
+
+<!-- ============================================
+     移动端触控 / Mobile Controls (z-index: 200)
+     在移动设备或窄屏幕上自动显示
+     左侧：方向键 ← →  右侧：跳跃键 ↑
+     ============================================ -->
+<div id="mobile-controls">
+  <div class="ctrl-left">
+    <button class="ctrl-btn" id="btn-left">&larr;</button>
+    <button class="ctrl-btn" id="btn-right">&rarr;</button>
+  </div>
+  <div class="ctrl-right">
+    <button class="ctrl-btn" id="btn-jump">&uarr;</button>
+  </div>
+</div>
+
+<!-- ============================================
+     画作揭示 / Painting Reveal (z-index: 800)
+     通关后展示对应莫奈名画的详细信息
+     包含：画作图片、标题、画家、描述、继续按钮
+     ============================================ -->
+<div id="painting-reveal">
+  <div class="reveal-inner">
+    <div class="reveal-canvas-wrap">
+      <img id="reveal-bg-img" src="" alt="" class="reveal-layer">
+      <img id="reveal-img" src="" alt="" class="reveal-painting-img">
+      <canvas id="reveal-mask-canvas" class="reveal-layer"></canvas>
+    </div>
+    <div class="info">
+      <h2 id="reveal-title"></h2>
+      <div class="artist" id="reveal-artist"></div>
+      <div class="desc" id="reveal-desc"></div>
+    </div>
+  </div>
+  <button class="continue-btn" id="btn-continue">继续旅程</button>
+</div>
+
+<!-- ============================================
+     画作画廊 / Gallery (z-index: 850)
+     从菜单进入，展示已解锁的关卡画作
+     点击已解锁画作可查看详情
+     ============================================ -->
+<div id="gallery">
+  <button class="gallery-back" id="btn-gallery-back">&larr; 返回</button>
+  <div class="gallery-header"><h2>画 作 画 廊</h2></div>
+  <div class="gallery-grid" id="gallery-grid"></div>
+</div>
+
+<!-- ============================================
+     纪念品图鉴 / Souvenir Album (z-index: 850)
+     从菜单进入，展示所有关卡的纪念品收集状态
+     已收集的显示名称和图标，未收集的显示剪影
+     数据持久化在 localStorage
+     ============================================ -->
+<div id="album">
+  <button class="gallery-back" id="btn-album-back">&larr; 返回</button>
+  <div class="gallery-header"><h2 id="album-header">纪念品图鉴</h2></div>
+  <div class="album-body" id="album-body"></div>
+</div>
+
+<!-- ============================================
+     关卡选择 / Level Select (z-index: 860)
+     从菜单"开始旅程"按钮进入
+     Level 1 始终解锁，后续关卡通关解锁
+     ============================================ -->
+<div id="level-select">
+  <button class="gallery-back" id="btn-levelsel-back">&larr; 返回</button>
+  <div class="gallery-header"><h2 id="levelsel-header">选 择 关 卡</h2></div>
+  <div class="levelsel-grid" id="levelsel-grid"></div>
+</div>
+
+<!-- ============================================
+     关卡转场 / Transition Overlay (z-index: 700)
+     关卡切换时的黑色淡入淡出效果
+     ============================================ -->
+<div id="transition-overlay"></div>
+
+<script src="game.js?v=4.4"></script>
+</body>
+</html>
