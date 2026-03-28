@@ -2,7 +2,7 @@
 
 An impressionist-style side-scrolling platformer built entirely with HTML5 Canvas. Explore six paintings by Claude Monet, collect hidden treasures, and uncover the love story between Monet and Camille Doncieux.
 
-**[Play Now](https://s85m9uuq.mule.page/)**
+**[Play Now](https://s85m9uuq.mule.page/)** | [中文文档](README_zh.md)
 
 ![Main Menu](docs/screenshots/01_menu.png)
 
