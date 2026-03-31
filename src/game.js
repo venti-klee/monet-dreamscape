@@ -1398,9 +1398,9 @@ class Player {
       }));
     }
     if (this.onGround) {
-      // Never save safe position on disappearing platforms — they can vanish
+      // Never save safe position on disappearing or submerged tidal platforms
       const plat = this._onPlatform;
-      if (!plat || !plat.disappear) {
+      if (!plat || (!plat.disappear && !plat.submerged)) {
         this.lastSafePos.x = this.x;
         this.lastSafePos.y = this.y;
       }
@@ -2912,6 +2912,20 @@ const Game = {
       this.player.onGround = false;
       this.state = 'respawning';
       this.deathTimer = 0;
+      // Reset disappearing platform states so player doesn't respawn onto gone platforms
+      for (const p of this.platforms) {
+        if (p.disappear) {
+          p._disappearState = 'solid';
+          p._disappearTimer = 0;
+          p._disappearAlpha = 1;
+          p._noCollision = false;
+        }
+      }
+      // Reset glide energy on respawn
+      this.glideEnergy = this.glideMaxEnergy;
+      this.isGliding = false;
+      // Extend tidal grace period on respawn to prevent death loops
+      this.tidalGraceTimer = 3.5;
       // Respawn glow particles
       ParticleSystem.emit(safe.x + this.player.w / 2, safe.y + this.player.h / 2, 12, (i) => ({
         vx: (Math.random() - 0.5) * 3,
@@ -3462,7 +3476,7 @@ const Game = {
         const gustProgress = (cyclePos - wc.interval) / wc.duration;
         const gustStrength = Math.sin(gustProgress * Math.PI); // ramp up then down
         this.windForce = this.windDirection * wc.force * gustStrength;
-        this.player.vx += this.windForce * dt;
+        this.player.x += this.windForce * dt;
       } else {
         this.windActive = false;
         this.windForce = 0;
@@ -3481,7 +3495,7 @@ const Game = {
         this.isGliding = true;
         this.glideEnergy -= dt;
         this.player.vy = Math.min(this.player.vy, 60); // cap fall speed
-        this.player.vy *= 0.85; // reduce gravity effect
+        this.player.vy *= Math.pow(0.85, dt * 60); // frame-rate independent damping
       } else if (this.player.onGround) {
         this.isGliding = false;
       }
