@@ -2235,6 +2235,13 @@ const LEVELS = [
       duration: 1.5,   // gust duration
       force: 120,      // horizontal push force px/s
     },
+    windFlags: [
+      { x: 150, y: 458 },    // on first hedge platform
+      { x: 620, y: 418 },    // on second hedge
+      { x: 1150, y: 368 },   // mid-level hedge
+      { x: 1660, y: 338 },   // later hedge
+      { x: 2040, y: 358 },   // near finish
+    ],
     colors: {
       primary: 'rgba(100,180,80,',
       secondary: 'rgba(220,200,100,',
@@ -2685,7 +2692,9 @@ const Game = {
     // Level-specific mechanics
     this.windTimer = 0;
     this.windActive = false;
+    this.windPreWarning = false;
     this.windDirection = 1;
+    this.nextWindDirection = 1;
     this.windForce = 0;
     this.glideEnergy = 2; // seconds of glide available
     this.glideMaxEnergy = 2;
@@ -3467,18 +3476,30 @@ const Game = {
       this.windTimer += dt;
       const cycleLen = wc.interval + wc.duration;
       const cyclePos = this.windTimer % cycleLen;
-      if (cyclePos > wc.interval) {
+      const preWarnTime = 1.0; // 1 second warning before gust
+
+      // Pre-warning phase: choose direction early so flags can animate
+      if (cyclePos > wc.interval - preWarnTime && cyclePos <= wc.interval) {
+        if (!this.windPreWarning) {
+          this.windPreWarning = true;
+          this.nextWindDirection = Math.random() > 0.5 ? 1 : -1;
+        }
+        this.windActive = false;
+        this.windForce = 0;
+      } else if (cyclePos > wc.interval) {
         // Wind is blowing
         if (!this.windActive) {
           this.windActive = true;
-          this.windDirection = Math.random() > 0.5 ? 1 : -1;
+          this.windDirection = this.nextWindDirection;
         }
+        this.windPreWarning = false;
         const gustProgress = (cyclePos - wc.interval) / wc.duration;
         const gustStrength = Math.sin(gustProgress * Math.PI); // ramp up then down
         this.windForce = this.windDirection * wc.force * gustStrength;
         this.player.x += this.windForce * dt;
       } else {
         this.windActive = false;
+        this.windPreWarning = false;
         this.windForce = 0;
       }
     }
@@ -3888,23 +3909,130 @@ const Game = {
     ctx.save();
     ctx.translate(-cam.x, -cam.y);
 
-    // Wind visual (gusting particles)
-    if (level.mechanic === 'wind' && this.windActive) {
-      ctx.save();
-      ctx.globalAlpha = 0.15;
-      const wDir = this.windDirection;
-      for (let i = 0; i < 20; i++) {
-        const wx = cam.x + Math.random() * w;
-        const wy = cam.y + Math.random() * h * 0.8;
-        const wLen = 15 + Math.random() * 25;
-        ctx.strokeStyle = 'rgba(245,234,208,0.3)';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(wx, wy);
-        ctx.lineTo(wx + wLen * wDir, wy - 2 + Math.random() * 4);
-        ctx.stroke();
+    // Wind visual — flags, particles, HUD arrow
+    if (level.mechanic === 'wind') {
+      const wDir = this.windActive ? this.windDirection : (this.windPreWarning ? this.nextWindDirection : 0);
+      const t = this.time;
+
+      // --- Wind Flag Poles ---
+      if (level.windFlags) {
+        for (const flag of level.windFlags) {
+          const fx = flag.x;
+          const fy = flag.y;
+          const poleH = 45;
+
+          // Pole
+          ctx.save();
+          ctx.strokeStyle = 'rgba(120,90,60,0.8)';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(fx, fy);
+          ctx.lineTo(fx, fy - poleH);
+          ctx.stroke();
+
+          // Pennant — triangular flag
+          const flagW = 22;
+          const flagH = 14;
+          const topY = fy - poleH;
+          let extend = 0; // how far the flag extends horizontally (0=limp, 1=full)
+          let flutter = 0;
+
+          if (this.windActive) {
+            // Full extension + rapid flutter
+            extend = 0.7 + 0.3 * Math.abs(this.windForce) / (level.windConfig.force);
+            flutter = Math.sin(t * 18) * 3 * extend;
+          } else if (this.windPreWarning) {
+            // Gradually extend as warning builds
+            const wc = level.windConfig;
+            const cycleLen = wc.interval + wc.duration;
+            const cyclePos = this.windTimer % cycleLen;
+            const warnProgress = (cyclePos - (wc.interval - 1.0)) / 1.0;
+            extend = warnProgress * 0.5;
+            flutter = Math.sin(t * 8) * 2 * extend;
+          } else {
+            // Limp hang with gentle sway
+            extend = 0.05;
+            flutter = Math.sin(t * 2 + fx * 0.1) * 1.5;
+          }
+
+          const dir = wDir || 1;
+          ctx.fillStyle = this.windActive ? 'rgba(220,200,100,0.85)' :
+                          this.windPreWarning ? 'rgba(220,200,100,0.6)' :
+                          'rgba(180,160,100,0.4)';
+          ctx.beginPath();
+          ctx.moveTo(fx, topY);
+          ctx.lineTo(fx + flagW * extend * dir, topY + flagH * 0.3 + flutter);
+          ctx.lineTo(fx, topY + flagH);
+          ctx.closePath();
+          ctx.fill();
+
+          // Pole top ball
+          ctx.fillStyle = 'rgba(200,170,100,0.7)';
+          ctx.beginPath();
+          ctx.arc(fx, topY, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
       }
-      ctx.restore();
+
+      // --- Wind Gust Particles (improved) ---
+      if (this.windActive) {
+        ctx.save();
+        const gustStr = Math.abs(this.windForce) / level.windConfig.force;
+        const particleCount = Math.floor(15 + gustStr * 20);
+
+        // Streak lines
+        ctx.globalAlpha = 0.12 + gustStr * 0.15;
+        for (let i = 0; i < particleCount; i++) {
+          const wx = cam.x + Math.random() * w;
+          const wy = cam.y + Math.random() * h * 0.85;
+          const wLen = 20 + Math.random() * 35 * gustStr;
+          ctx.strokeStyle = 'rgba(245,234,208,0.35)';
+          ctx.lineWidth = 0.8 + Math.random() * 0.8;
+          ctx.beginPath();
+          ctx.moveTo(wx, wy);
+          ctx.lineTo(wx + wLen * this.windDirection, wy - 1 + Math.random() * 2);
+          ctx.stroke();
+        }
+
+        // Leaf/petal particles
+        ctx.globalAlpha = 0.25 + gustStr * 0.2;
+        const leafCount = Math.floor(5 + gustStr * 8);
+        for (let i = 0; i < leafCount; i++) {
+          const lx = cam.x + ((t * 80 * this.windDirection + i * 197) % (w + 100)) - 50;
+          const ly = cam.y + ((i * 137 + t * 20) % (h * 0.8)) + 30;
+          const rot = t * 3 + i * 1.7;
+          const sz = 3 + Math.random() * 3;
+          ctx.save();
+          ctx.translate(lx, ly);
+          ctx.rotate(rot);
+          // Alternate between green leaves and pink petals
+          if (i % 3 === 0) {
+            ctx.fillStyle = 'rgba(240,180,200,0.6)'; // pink petal
+          } else {
+            ctx.fillStyle = 'rgba(100,180,80,0.5)';  // green leaf
+          }
+          ctx.beginPath();
+          ctx.ellipse(0, 0, sz * 1.5, sz * 0.5, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+        ctx.restore();
+      } else if (this.windPreWarning) {
+        // Pre-warning: sparse slow drifting particles
+        ctx.save();
+        const dir = this.nextWindDirection;
+        ctx.globalAlpha = 0.1;
+        for (let i = 0; i < 6; i++) {
+          const wx = cam.x + ((t * 25 * dir + i * 300) % (w + 60)) - 30;
+          const wy = cam.y + (i * 120) % (h * 0.7) + 50;
+          ctx.fillStyle = i % 2 === 0 ? 'rgba(100,180,80,0.4)' : 'rgba(220,200,100,0.4)';
+          ctx.beginPath();
+          ctx.ellipse(wx, wy, 3, 1.5, t * 1.5 + i, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
     }
 
     // Updraft visual
@@ -4170,6 +4298,40 @@ const Game = {
       wg.addColorStop(1, 'rgba(255,150,50,0)');
       ctx.fillStyle = wg;
       ctx.fillRect(plx - wgR, ply - wgR, wgR * 2, wgR * 2);
+      ctx.restore();
+    }
+
+    // Wind direction HUD arrow (screen-space, top-right area)
+    if (level.mechanic === 'wind' && (this.windActive || this.windPreWarning)) {
+      ctx.save();
+      const arrowX = w - 60;
+      const arrowY = 55;
+      const dir = this.windActive ? this.windDirection : this.nextWindDirection;
+      const alpha = this.windActive ? 0.85 : 0.4;
+
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = this.windActive ? 'rgba(220,200,100,0.9)' : 'rgba(200,190,140,0.6)';
+      ctx.strokeStyle = this.windActive ? 'rgba(245,234,208,0.9)' : 'rgba(220,210,180,0.5)';
+      ctx.lineWidth = 2;
+
+      // Arrow shape pointing in wind direction
+      ctx.beginPath();
+      ctx.moveTo(arrowX + 18 * dir, arrowY);           // arrow tip
+      ctx.lineTo(arrowX - 4 * dir, arrowY - 8);        // top wing
+      ctx.lineTo(arrowX - 4 * dir, arrowY - 3);        // notch top
+      ctx.lineTo(arrowX - 16 * dir, arrowY - 3);       // tail top
+      ctx.lineTo(arrowX - 16 * dir, arrowY + 3);       // tail bottom
+      ctx.lineTo(arrowX - 4 * dir, arrowY + 3);        // notch bottom
+      ctx.lineTo(arrowX - 4 * dir, arrowY + 8);        // bottom wing
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Label
+      ctx.font = '10px Georgia';
+      ctx.fillStyle = 'rgba(245,234,208,' + alpha + ')';
+      ctx.textAlign = 'center';
+      ctx.fillText(this.windActive ? 'WIND' : '...', arrowX, arrowY + 22);
       ctx.restore();
     }
 
