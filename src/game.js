@@ -353,70 +353,70 @@ const VoiceoverSystem = {
 
   // Voiceover trigger definitions per level
   triggers: [
-    // Index 0: Woman in the Green Dress
+    // Index 0: Woman in the Green Dress (levelWidth: 3500)
     [
       { x: 200, key: 'vo_l4_1', speaker: 'Monet', audio: 'vo/l4_v1.mp3' },
-      { x: 500, key: 'vo_l4_2', speaker: 'Monet', audio: 'vo/l4_v2.mp3' },
-      { x: 800, key: 'vo_l4_3', speaker: 'Camille', audio: 'vo/l4_v3.mp3', chain: [
+      { x: 800, key: 'vo_l4_2', speaker: 'Monet', audio: 'vo/l4_v2.mp3' },
+      { x: 1500, key: 'vo_l4_3', speaker: 'Camille', audio: 'vo/l4_v3.mp3', chain: [
         { key: 'vo_l4_4', speaker: 'Monet', audio: 'vo/l4_v4.mp3', delay: 4 },
         { key: 'vo_l4_4r', speaker: 'Camille', audio: 'vo/l4_v4r.mp3', delay: 4 },
       ]},
-      { x: 1400, key: 'vo_l4_5', speaker: 'Monet', audio: 'vo/l4_v5.mp3' },
+      { x: 2600, key: 'vo_l4_5', speaker: 'Monet', audio: 'vo/l4_v5.mp3' },
       { event: 'gate_unlock', key: 'vo_l4_6', speaker: 'Monet', audio: 'vo/l4_v6.mp3' },
     ],
-    // Index 1: Women in the Garden
+    // Index 1: Women in the Garden (levelWidth: 3700)
     [
       { x: 200, key: 'vo_l5_1', speaker: 'Monet', audio: 'vo/l5_v1.mp3' },
-      { x: 600, key: 'vo_l5_2', speaker: 'Monet', audio: 'vo/l5_v2.mp3' },
-      { x: 900, key: 'vo_l5_3', speaker: 'Camille', audio: 'vo/l5_v3.mp3', chain: [
+      { x: 900, key: 'vo_l5_2', speaker: 'Monet', audio: 'vo/l5_v2.mp3' },
+      { x: 1600, key: 'vo_l5_3', speaker: 'Camille', audio: 'vo/l5_v3.mp3', chain: [
         { key: 'vo_l5_4', speaker: 'Monet', audio: 'vo/l5_v4.mp3', delay: 4 },
         { key: 'vo_l5_4r', speaker: 'Camille', audio: 'vo/l5_v4r.mp3', delay: 4 },
       ]},
-      { x: 1500, key: 'vo_l5_5', speaker: 'Monet', audio: 'vo/l5_v5.mp3' },
+      { x: 2800, key: 'vo_l5_5', speaker: 'Monet', audio: 'vo/l5_v5.mp3' },
       { event: 'gate_unlock', key: 'vo_l5_6', speaker: 'Monet', audio: 'vo/l5_v6.mp3' },
     ],
-    // Index 2: Woman with a Parasol
+    // Index 2: Woman with a Parasol (levelWidth: 3600)
     [
       { x: 150, key: 'vo_l6_1', speaker: 'Monet', audio: 'vo/l6_v1.mp3' },
-      { x: 450, key: 'vo_l6_2', speaker: 'Monet', audio: 'vo/l6_v2.mp3' },
-      { x: 700, key: 'vo_l6_3', speaker: 'Camille', audio: 'vo/l6_v3.mp3', chain: [
+      { x: 800, key: 'vo_l6_2', speaker: 'Monet', audio: 'vo/l6_v2.mp3' },
+      { x: 1500, key: 'vo_l6_3', speaker: 'Camille', audio: 'vo/l6_v3.mp3', chain: [
         { key: 'vo_l6_4', speaker: 'Monet', audio: 'vo/l6_v4.mp3', delay: 4 },
         { key: 'vo_l6_4r', speaker: 'Camille', audio: 'vo/l6_v4r.mp3', delay: 4 },
       ]},
-      { x: 1100, key: 'vo_l6_5', speaker: 'Monet', audio: 'vo/l6_v5.mp3' },
+      { x: 2600, key: 'vo_l6_5', speaker: 'Monet', audio: 'vo/l6_v5.mp3' },
       { event: 'gate_unlock', key: 'vo_l6_6', speaker: 'Monet', audio: 'vo/l6_v6.mp3' },
     ],
-    // Index 3: Water Lilies
+    // Index 3: Water Lilies (levelWidth: 3200)
     [
       { x: 200, key: 'vo_l1_1', speaker: 'Monet', audio: 'vo/l1_v1.mp3' },
-      { x: 500, key: 'vo_l1_2', speaker: 'Monet', audio: 'vo/l1_v2.mp3' },
-      { x: 700, key: 'vo_l1_3', speaker: 'Camille', audio: 'vo/l1_v3.mp3', chain: [
+      { x: 750, key: 'vo_l1_2', speaker: 'Monet', audio: 'vo/l1_v2.mp3' },
+      { x: 1400, key: 'vo_l1_3', speaker: 'Camille', audio: 'vo/l1_v3.mp3', chain: [
         { key: 'vo_l1_4', speaker: 'Monet', audio: 'vo/l1_v4.mp3', delay: 4 },
         { key: 'vo_l1_4r', speaker: 'Camille', audio: 'vo/l1_v4r.mp3', delay: 4 },
       ]},
-      { x: 1100, key: 'vo_l1_5', speaker: 'Monet', audio: 'vo/l1_v5.mp3' },
+      { x: 2400, key: 'vo_l1_5', speaker: 'Monet', audio: 'vo/l1_v5.mp3' },
       { event: 'gate_unlock', key: 'vo_l1_6', speaker: 'Monet', audio: 'vo/l1_v6.mp3' },
     ],
-    // Index 4: Impression, Sunrise
+    // Index 4: Impression, Sunrise (levelWidth: 3300)
     [
       { x: 200, key: 'vo_l2_1', speaker: 'Monet', audio: 'vo/l2_v1.mp3' },
-      { x: 500, key: 'vo_l2_2', speaker: 'Monet', audio: 'vo/l2_v2.mp3' },
-      { x: 800, key: 'vo_l2_3', speaker: 'Camille', audio: 'vo/l2_v3.mp3', chain: [
+      { x: 800, key: 'vo_l2_2', speaker: 'Monet', audio: 'vo/l2_v2.mp3' },
+      { x: 1500, key: 'vo_l2_3', speaker: 'Camille', audio: 'vo/l2_v3.mp3', chain: [
         { key: 'vo_l2_4', speaker: 'Monet', audio: 'vo/l2_v4.mp3', delay: 4 },
         { key: 'vo_l2_4r', speaker: 'Camille', audio: 'vo/l2_v4r.mp3', delay: 4 },
       ]},
-      { x: 1200, key: 'vo_l2_5', speaker: 'Monet', audio: 'vo/l2_v5.mp3' },
+      { x: 2400, key: 'vo_l2_5', speaker: 'Monet', audio: 'vo/l2_v5.mp3' },
       { event: 'gate_unlock', key: 'vo_l2_6', speaker: 'Monet', audio: 'vo/l2_v6.mp3' },
     ],
-    // Index 5: The Japanese Bridge
+    // Index 5: The Japanese Bridge (levelWidth: 3500)
     [
       { x: 200, key: 'vo_l3_1', speaker: 'Monet', audio: 'vo/l3_v1.mp3' },
-      { x: 550, key: 'vo_l3_2', speaker: 'Monet', audio: 'vo/l3_v2.mp3' },
-      { x: 900, key: 'vo_l3_3', speaker: 'Camille', audio: 'vo/l3_v3.mp3', chain: [
+      { x: 850, key: 'vo_l3_2', speaker: 'Monet', audio: 'vo/l3_v2.mp3' },
+      { x: 1600, key: 'vo_l3_3', speaker: 'Camille', audio: 'vo/l3_v3.mp3', chain: [
         { key: 'vo_l3_4', speaker: 'Monet', audio: 'vo/l3_v4.mp3', delay: 3.5 },
         { key: 'vo_l3_4r', speaker: 'Camille', audio: 'vo/l3_v4r.mp3', delay: 3.5 },
       ]},
-      { x: 1300, key: 'vo_l3_5', speaker: 'Monet', audio: 'vo/l3_v5.mp3' },
+      { x: 2600, key: 'vo_l3_5', speaker: 'Monet', audio: 'vo/l3_v5.mp3' },
       { event: 'gate_unlock', key: 'vo_l3_6', speaker: 'Monet', audio: 'vo/l3_v6.mp3' },
     ],
   ],
@@ -2174,12 +2174,18 @@ const LEVELS = [
     bgColor: '#12100a',
     paintRevealMode: 'radial',
     mechanic: 'light', // unique: player lantern + spotlights
-    lightZones: [ // fixed spotlights in the level (x, y, radius)
-      { x: 80, y: 350, r: 200 },   // start area
-      { x: 500, y: 300, r: 180 },  // window light
-      { x: 1000, y: 250, r: 160 }, // candle
-      { x: 1500, y: 280, r: 200 }, // window
-      { x: 2000, y: 320, r: 250 }, // finish area
+    lightZones: [
+      { x: 80, y: 400, r: 200 },    // start area
+      { x: 450, y: 350, r: 170 },   // first climb spotlight
+      { x: 750, y: 200, r: 160 },   // tower base light
+      { x: 1050, y: 150, r: 180 },  // tower top candle
+      { x: 1400, y: 300, r: 150 },  // dark maze entrance
+      { x: 1650, y: 250, r: 140 },  // maze mid light
+      { x: 1900, y: 180, r: 160 },  // maze upper light
+      { x: 2200, y: 350, r: 150 },  // descent section
+      { x: 2600, y: 300, r: 170 },  // gallery corridor
+      { x: 2950, y: 250, r: 160 },  // high gallery
+      { x: 3300, y: 400, r: 220 },  // finish area
     ],
     colors: {
       primary: 'rgba(180,150,80,',
@@ -2187,38 +2193,65 @@ const LEVELS = [
       accent: 'rgba(60,120,60,',
     },
     platforms: [
-      { x: 40, y: 480, w: 200, h: 24, type: 'shelf' },
-      { x: 250, y: 420, w: 80, h: 60, type: 'easel' },
-      { x: 400, y: 380, w: 140, h: 20, type: 'shelf' },
-      { x: 550, y: 320, w: 70, h: 55, type: 'easel' },
-      { x: 680, y: 370, w: 100, h: 18, type: 'frame' },
-      { x: 820, y: 430, w: 160, h: 22, type: 'shelf' },
-      { x: 980, y: 350, w: 80, h: 55, type: 'easel' },
-      { x: 1100, y: 290, w: 120, h: 18, type: 'frame' },
-      { x: 1250, y: 360, w: 140, h: 22, type: 'shelf' },
-      { x: 1400, y: 300, w: 70, h: 55, type: 'easel' },
-      { x: 1550, y: 400, w: 160, h: 24, type: 'shelf' },
-      { x: 1720, y: 340, w: 100, h: 18, type: 'frame' },
-      { x: 1880, y: 420, w: 120, h: 22, type: 'shelf' },
-      { x: 2050, y: 360, w: 80, h: 55, type: 'easel' },
-      { x: 2200, y: 450, w: 160, h: 30, type: 'finish' },
+      // --- Start area: ground floor ---
+      { x: 40, y: 500, w: 220, h: 24, type: 'shelf' },
+      { x: 280, y: 450, w: 80, h: 60, type: 'easel' },
+      { x: 400, y: 400, w: 140, h: 20, type: 'shelf' },
+      // --- First vertical climb: easel staircase ---
+      { x: 560, y: 350, w: 70, h: 55, type: 'easel' },
+      { x: 660, y: 300, w: 120, h: 18, type: 'frame', move: { type: 'move', range: 60, speed: 0.4 } },
+      { x: 780, y: 250, w: 70, h: 55, type: 'easel' },
+      { x: 900, y: 200, w: 140, h: 20, type: 'shelf' },
+      // --- Central tower: stacked easels going UP ---
+      { x: 1000, y: 480, w: 160, h: 22, type: 'shelf' },
+      { x: 1020, y: 390, w: 70, h: 55, type: 'easel' },
+      { x: 1100, y: 310, w: 100, h: 18, type: 'frame' },
+      { x: 1030, y: 230, w: 70, h: 55, type: 'easel' },
+      { x: 1120, y: 160, w: 120, h: 20, type: 'shelf' },
+      { x: 1050, y: 100, w: 80, h: 55, type: 'easel' },
+      // --- Dark maze section: navigate between light zones ---
+      { x: 1300, y: 350, w: 100, h: 18, type: 'frame' },
+      { x: 1450, y: 300, w: 140, h: 22, type: 'shelf' },
+      { x: 1600, y: 250, w: 80, h: 55, type: 'easel' },
+      { x: 1500, y: 180, w: 100, h: 18, type: 'frame', move: { type: 'move', range: 80, speed: 0.5 } },
+      { x: 1750, y: 320, w: 120, h: 20, type: 'shelf' },
+      { x: 1880, y: 250, w: 70, h: 55, type: 'easel' },
+      { x: 1780, y: 160, w: 100, h: 18, type: 'frame' },
+      { x: 1950, y: 120, w: 140, h: 20, type: 'shelf' },
+      // --- Descent and horizontal gallery ---
+      { x: 2100, y: 200, w: 80, h: 55, type: 'easel' },
+      { x: 2200, y: 280, w: 120, h: 18, type: 'frame', move: { type: 'move', range: 70, speed: 0.6 } },
+      { x: 2350, y: 360, w: 160, h: 22, type: 'shelf' },
+      { x: 2520, y: 420, w: 100, h: 18, type: 'frame' },
+      { x: 2650, y: 360, w: 140, h: 22, type: 'shelf' },
+      // --- Upper gallery route (optional, high) ---
+      { x: 2500, y: 250, w: 80, h: 55, type: 'easel' },
+      { x: 2650, y: 200, w: 100, h: 18, type: 'frame', move: { type: 'float', range: 8, speed: 0.7 } },
+      { x: 2800, y: 150, w: 120, h: 20, type: 'shelf' },
+      // --- Final approach ---
+      { x: 2800, y: 420, w: 120, h: 22, type: 'shelf' },
+      { x: 2960, y: 350, w: 70, h: 55, type: 'easel' },
+      { x: 3080, y: 300, w: 120, h: 18, type: 'frame' },
+      { x: 3200, y: 450, w: 200, h: 30, type: 'finish' },
     ],
     collectibles: [
-      { x: 260, y: 350, type: 'key' },
-      { x: 990, y: 280, type: 'key' },
-      { x: 1730, y: 270, type: 'key' },
-      { x: 420, y: 310, type: 'pigment', color: 'rgba(50,50,50,', nameKey: 'sv_l4_1' },
-      { x: 700, y: 300, type: 'pigment', color: 'rgba(180,160,100,', nameKey: 'sv_l4_2' },
-      { x: 1120, y: 220, type: 'fragment', colors: ['#b49650', '#3c783c', '#645032'], nameKey: 'sv_l4_3' },
-      { x: 1560, y: 330, type: 'pigment', color: 'rgba(60,120,60,', nameKey: 'sv_l4_4' },
-      { x: 1900, y: 350, type: 'fragment', colors: ['#c8a060', '#4a9a4a', '#8b7355'], nameKey: 'sv_l4_5' },
+      // Keys at different vertical heights
+      { x: 910, y: 130, type: 'key' },       // top of first climb
+      { x: 1060, y: 40, type: 'key' },       // top of central tower
+      { x: 1960, y: 60, type: 'key' },       // top of dark maze
+      // Souvenirs - exploration rewards
+      { x: 670, y: 230, type: 'pigment', color: 'rgba(50,50,50,', nameKey: 'sv_l4_1' },
+      { x: 1110, y: 240, type: 'pigment', color: 'rgba(180,160,100,', nameKey: 'sv_l4_2' },
+      { x: 1610, y: 180, type: 'fragment', colors: ['#b49650', '#3c783c', '#645032'], nameKey: 'sv_l4_3' },
+      { x: 2660, y: 130, type: 'pigment', color: 'rgba(60,120,60,', nameKey: 'sv_l4_4' },
+      { x: 2810, y: 90, type: 'fragment', colors: ['#c8a060', '#4a9a4a', '#8b7355'], nameKey: 'sv_l4_5' },
     ],
-    levelWidth: 2400,
+    levelWidth: 3500,
     hints: [
       { x: 100, textKey: 'l4_hint1' },
-      { x: 400, textKey: 'l4_hint2' },
-      { x: 1200, textKey: 'l4_hint3' },
-      { x: 1800, textKey: 'l4_hint4' },
+      { x: 700, textKey: 'l4_hint2' },
+      { x: 1400, textKey: 'l4_hint3' },
+      { x: 2600, textKey: 'l4_hint4' },
     ]
   },
   // ---- Index 1: Women in the Garden (1866) — Wind ----
@@ -2236,11 +2269,15 @@ const LEVELS = [
       force: 120,      // horizontal push force px/s
     },
     windFlags: [
-      { x: 150, y: 458 },    // on first hedge platform
-      { x: 620, y: 418 },    // on second hedge
-      { x: 1150, y: 368 },   // mid-level hedge
-      { x: 1660, y: 338 },   // later hedge
-      { x: 2040, y: 358 },   // near finish
+      { x: 150, y: 458 },    // start area
+      { x: 500, y: 408 },    // before first tree
+      { x: 900, y: 188 },    // top of first tree
+      { x: 1350, y: 498 },   // descent valley
+      { x: 1700, y: 258 },   // wind gap crossing
+      { x: 2100, y: 408 },   // second tree base
+      { x: 2500, y: 148 },   // top of second tree
+      { x: 3000, y: 358 },   // approach to finish
+      { x: 3400, y: 308 },   // near finish
     ],
     colors: {
       primary: 'rgba(100,180,80,',
@@ -2248,40 +2285,69 @@ const LEVELS = [
       accent: 'rgba(240,180,200,',
     },
     platforms: [
-      { x: 40, y: 480, w: 200, h: 24, type: 'hedge' },
-      { x: 280, y: 430, w: 120, h: 20, type: 'bench' },
-      { x: 450, y: 380, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 5, speed: 0.8 } },
-      { x: 600, y: 440, w: 180, h: 26, type: 'hedge' },
-      { x: 820, y: 370, w: 120, h: 20, type: 'bench' },
-      { x: 980, y: 310, w: 110, h: 16, type: 'branch', move: { type: 'float', range: 8, speed: 1 } },
-      { x: 1130, y: 390, w: 160, h: 26, type: 'hedge' },
-      { x: 1320, y: 330, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 6, speed: 0.9 } },
-      { x: 1480, y: 420, w: 120, h: 20, type: 'bench' },
-      { x: 1640, y: 360, w: 180, h: 26, type: 'hedge' },
-      { x: 1860, y: 300, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 7, speed: 1.1 } },
-      { x: 2020, y: 380, w: 140, h: 22, type: 'hedge' },
-      { x: 2200, y: 430, w: 120, h: 20, type: 'bench' },
-      { x: 2380, y: 460, w: 160, h: 30, type: 'finish' },
+      // --- Start garden path ---
+      { x: 40, y: 480, w: 220, h: 24, type: 'hedge' },
+      { x: 300, y: 430, w: 140, h: 20, type: 'bench' },
+      { x: 480, y: 480, w: 180, h: 26, type: 'hedge' },
+      // --- First tall tree: vertical climb using branches ---
+      { x: 680, y: 430, w: 100, h: 16, type: 'branch' },
+      { x: 750, y: 370, w: 110, h: 16, type: 'branch', move: { type: 'float', range: 6, speed: 0.8 } },
+      { x: 680, y: 310, w: 100, h: 16, type: 'branch' },
+      { x: 770, y: 250, w: 120, h: 16, type: 'branch', move: { type: 'float', range: 5, speed: 1.0 } },
+      { x: 700, y: 190, w: 100, h: 16, type: 'branch' },
+      { x: 800, y: 140, w: 140, h: 20, type: 'hedge' },
+      // --- Wind-assisted gap: must use wind gust to reach far platform ---
+      { x: 1050, y: 180, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 8, speed: 0.7 } },
+      { x: 1250, y: 200, w: 120, h: 20, type: 'bench' },
+      // --- Descending section: go down into valley ---
+      { x: 1200, y: 300, w: 100, h: 16, type: 'branch' },
+      { x: 1100, y: 380, w: 140, h: 26, type: 'hedge' },
+      { x: 1300, y: 450, w: 180, h: 24, type: 'hedge' },
+      { x: 1500, y: 520, w: 200, h: 26, type: 'hedge' },
+      // --- Valley floor with wind hazard ---
+      { x: 1720, y: 480, w: 120, h: 20, type: 'bench' },
+      { x: 1880, y: 430, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 7, speed: 0.9 } },
+      // --- Second tall tree: climb back up ---
+      { x: 2050, y: 430, w: 140, h: 26, type: 'hedge' },
+      { x: 2100, y: 370, w: 100, h: 16, type: 'branch' },
+      { x: 2200, y: 310, w: 110, h: 16, type: 'branch', move: { type: 'float', range: 6, speed: 1.1 } },
+      { x: 2130, y: 250, w: 100, h: 16, type: 'branch' },
+      { x: 2230, y: 190, w: 120, h: 16, type: 'branch', move: { type: 'float', range: 5, speed: 0.8 } },
+      { x: 2150, y: 130, w: 100, h: 16, type: 'branch' },
+      { x: 2300, y: 100, w: 160, h: 20, type: 'hedge' },
+      // --- High canopy path (optional upper route) ---
+      { x: 2500, y: 120, w: 100, h: 16, type: 'branch', move: { type: 'move', range: 80, speed: 0.5 } },
+      { x: 2700, y: 150, w: 120, h: 16, type: 'branch' },
+      // --- Descent to finish ---
+      { x: 2450, y: 250, w: 120, h: 20, type: 'bench' },
+      { x: 2600, y: 320, w: 140, h: 26, type: 'hedge' },
+      { x: 2800, y: 380, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 6, speed: 0.9 } },
+      { x: 2950, y: 430, w: 160, h: 26, type: 'hedge' },
+      { x: 3150, y: 380, w: 120, h: 20, type: 'bench' },
+      { x: 3300, y: 330, w: 100, h: 16, type: 'branch' },
+      { x: 3450, y: 450, w: 200, h: 30, type: 'finish' },
     ],
     collectibles: [
-      { x: 300, y: 360, type: 'key' },
-      { x: 1000, y: 240, type: 'key' },
-      { x: 1870, y: 230, type: 'key' },
-      { x: 470, y: 310, type: 'pigment', color: 'rgba(255,255,255,', nameKey: 'sv_l5_1' },
-      { x: 840, y: 300, type: 'pigment', color: 'rgba(240,180,200,', nameKey: 'sv_l5_2' },
-      { x: 1150, y: 320, type: 'fragment', colors: ['#64b450', '#dcc864', '#f0b4c8'], nameKey: 'sv_l5_3' },
-      { x: 1500, y: 350, type: 'pigment', color: 'rgba(200,180,120,', nameKey: 'sv_l5_4' },
-      { x: 2040, y: 310, type: 'fragment', colors: ['#80c860', '#f0e080', '#e0c0d0'], nameKey: 'sv_l5_5' },
+      // Keys at different heights and sections
+      { x: 710, y: 120, type: 'key' },       // top of first tree
+      { x: 1260, y: 130, type: 'key' },      // after wind gap
+      { x: 2310, y: 40, type: 'key' },       // top of second tree
+      // Souvenirs - exploration rewards
+      { x: 760, y: 300, type: 'pigment', color: 'rgba(255,255,255,', nameKey: 'sv_l5_1' },
+      { x: 1060, y: 110, type: 'pigment', color: 'rgba(240,180,200,', nameKey: 'sv_l5_2' },
+      { x: 1510, y: 450, type: 'fragment', colors: ['#64b450', '#dcc864', '#f0b4c8'], nameKey: 'sv_l5_3' },
+      { x: 2710, y: 80, type: 'pigment', color: 'rgba(200,180,120,', nameKey: 'sv_l5_4' },
+      { x: 3160, y: 310, type: 'fragment', colors: ['#80c860', '#f0e080', '#e0c0d0'], nameKey: 'sv_l5_5' },
     ],
-    levelWidth: 2600,
+    levelWidth: 3700,
     hints: [
       { x: 100, textKey: 'l5_hint1' },
-      { x: 600, textKey: 'l5_hint2' },
-      { x: 1300, textKey: 'l5_hint3' },
-      { x: 1900, textKey: 'l5_hint4' },
+      { x: 700, textKey: 'l5_hint2' },
+      { x: 1700, textKey: 'l5_hint3' },
+      { x: 2800, textKey: 'l5_hint4' },
     ]
   },
-  // ---- Index 2: Woman with a Parasol (1875) — Glide ----
+  // ---- Index 2: Woman with a Parasol (1875) — Glide / Mountain Ascent ----
   {
     nameKey: 'l6_name', subtitleKey: 'l6_subtitle',
     paintingTitleKey: 'l6_painting_title', paintingArtistKey: 'l6_artist', paintingDescKey: 'l6_painting_desc',
@@ -2290,11 +2356,14 @@ const LEVELS = [
     bgColor: '#1a2838',
     paintRevealMode: 'layer',
     mechanic: 'glide', // unique: hold jump to glide, updraft zones
-    updraftZones: [ // {x, y, w, h} areas that push player up
-      { x: 300, y: 200, w: 120, h: 300 },
-      { x: 700, y: 150, w: 100, h: 350 },
-      { x: 1100, y: 100, w: 130, h: 400 },
-      { x: 1500, y: 180, w: 110, h: 320 },
+    updraftZones: [
+      // Vertical updraft columns for ascending between tiers
+      { x: 350, y: 100, w: 100, h: 450 },   // first ascent column
+      { x: 850, y: 80, w: 110, h: 480 },    // second ascent column
+      { x: 1400, y: 100, w: 120, h: 400 },  // cliff face updraft
+      { x: 1900, y: 80, w: 100, h: 500 },   // canyon updraft
+      { x: 2500, y: 100, w: 130, h: 400 },  // summit approach
+      { x: 3100, y: 120, w: 110, h: 380 },  // final summit updraft
     ],
     colors: {
       primary: 'rgba(130,190,230,',
@@ -2302,40 +2371,79 @@ const LEVELS = [
       accent: 'rgba(255,255,255,',
     },
     platforms: [
-      { x: 40, y: 480, w: 180, h: 22, type: 'grass' },
-      { x: 240, y: 420, w: 120, h: 20, type: 'grass' },
-      { x: 400, y: 350, w: 100, h: 18, type: 'grass' },
-      { x: 550, y: 280, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 10, speed: 0.5 } },
-      { x: 700, y: 380, w: 140, h: 22, type: 'grass' },
-      { x: 850, y: 300, w: 70, h: 14, type: 'kite', move: { type: 'float', range: 15, speed: 0.7 } },
-      { x: 980, y: 220, w: 100, h: 18, type: 'grass' },
-      { x: 1120, y: 340, w: 120, h: 20, type: 'grass' },
-      { x: 1260, y: 260, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 12, speed: 0.6 } },
-      { x: 1400, y: 180, w: 100, h: 18, type: 'grass' },
-      { x: 1550, y: 300, w: 140, h: 22, type: 'grass' },
-      { x: 1700, y: 220, w: 70, h: 14, type: 'kite', move: { type: 'float', range: 12, speed: 0.8 } },
-      { x: 1820, y: 380, w: 120, h: 20, type: 'grass' },
-      { x: 1950, y: 450, w: 160, h: 30, type: 'finish' },
+      // --- Foothills: gentle intro ---
+      { x: 40, y: 500, w: 220, h: 22, type: 'grass' },
+      { x: 280, y: 450, w: 140, h: 20, type: 'grass' },
+      { x: 440, y: 400, w: 100, h: 18, type: 'grass' },
+      // --- First vertical column: ride updraft, land on ledges ---
+      { x: 320, y: 320, w: 100, h: 18, type: 'grass' },
+      { x: 450, y: 240, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 10, speed: 0.5 } },
+      { x: 340, y: 170, w: 120, h: 18, type: 'grass' },
+      { x: 480, y: 110, w: 90, h: 16, type: 'cloud', move: { type: 'float', range: 8, speed: 0.6 } },
+      // --- Horizontal glide path (high altitude) ---
+      { x: 600, y: 140, w: 100, h: 16, type: 'kite', move: { type: 'float', range: 12, speed: 0.7 } },
+      { x: 750, y: 160, w: 120, h: 18, type: 'grass' },
+      // --- Second vertical column: descend then re-ascend ---
+      { x: 700, y: 350, w: 140, h: 22, type: 'grass' },
+      { x: 850, y: 280, w: 100, h: 18, type: 'grass' },
+      { x: 830, y: 200, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 14, speed: 0.5 } },
+      { x: 920, y: 130, w: 110, h: 18, type: 'grass' },
+      { x: 850, y: 90, w: 80, h: 14, type: 'kite', move: { type: 'float', range: 10, speed: 0.8 } },
+      // --- Cliffside traverse: horizontal with gaps ---
+      { x: 1050, y: 150, w: 100, h: 18, type: 'grass' },
+      { x: 1200, y: 180, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 15, speed: 0.6 } },
+      { x: 1350, y: 200, w: 120, h: 20, type: 'grass' },
+      // --- Third column: cliff face ascent ---
+      { x: 1380, y: 320, w: 140, h: 22, type: 'grass' },
+      { x: 1450, y: 250, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 10, speed: 0.7 } },
+      { x: 1400, y: 170, w: 100, h: 18, type: 'grass' },
+      { x: 1500, y: 110, w: 90, h: 16, type: 'kite', move: { type: 'float', range: 12, speed: 0.5 } },
+      // --- Canyon gap: must glide across wide gap ---
+      { x: 1650, y: 140, w: 100, h: 18, type: 'grass' },
+      { x: 1700, y: 400, w: 160, h: 22, type: 'grass' },   // canyon floor (safe landing)
+      { x: 1850, y: 320, w: 100, h: 18, type: 'grass' },
+      // --- Fourth updraft: canyon escape ---
+      { x: 1920, y: 240, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 14, speed: 0.6 } },
+      { x: 1880, y: 160, w: 120, h: 18, type: 'grass' },
+      { x: 2000, y: 100, w: 100, h: 16, type: 'kite', move: { type: 'float', range: 10, speed: 0.7 } },
+      // --- High ridge walk with kites ---
+      { x: 2150, y: 130, w: 140, h: 18, type: 'grass' },
+      { x: 2320, y: 160, w: 80, h: 14, type: 'kite', move: { type: 'float', range: 15, speed: 0.8 } },
+      { x: 2480, y: 120, w: 100, h: 18, type: 'grass' },
+      // --- Summit approach: final vertical push ---
+      { x: 2550, y: 250, w: 120, h: 20, type: 'grass' },
+      { x: 2500, y: 350, w: 140, h: 22, type: 'grass' },    // lower path option
+      { x: 2650, y: 180, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 12, speed: 0.5 } },
+      { x: 2700, y: 100, w: 120, h: 18, type: 'grass' },
+      // --- Optional sky island (high souvenir) ---
+      { x: 2850, y: 90, w: 80, h: 14, type: 'kite', move: { type: 'float', range: 10, speed: 0.6 } },
+      // --- Final descent to summit finish ---
+      { x: 2950, y: 200, w: 140, h: 20, type: 'grass' },
+      { x: 3100, y: 280, w: 100, h: 18, type: 'grass' },
+      { x: 3250, y: 350, w: 160, h: 22, type: 'grass' },
+      { x: 3400, y: 420, w: 200, h: 30, type: 'finish' },
     ],
     collectibles: [
-      { x: 260, y: 350, type: 'key' },
-      { x: 860, y: 230, type: 'key' },
-      { x: 1420, y: 110, type: 'key' },
-      { x: 560, y: 210, type: 'pigment', color: 'rgba(255,255,220,', nameKey: 'sv_l6_1' },
-      { x: 720, y: 310, type: 'pigment', color: 'rgba(180,140,100,', nameKey: 'sv_l6_2' },
-      { x: 1000, y: 150, type: 'fragment', colors: ['#82bee6', '#c8dc8c', '#ffffff'], nameKey: 'sv_l6_3' },
-      { x: 1280, y: 190, type: 'pigment', color: 'rgba(220,200,140,', nameKey: 'sv_l6_4' },
-      { x: 1560, y: 230, type: 'fragment', colors: ['#a0d0f0', '#e0e8b0', '#f0e0c0'], nameKey: 'sv_l6_5' },
+      // Keys at ascending heights requiring mastery of updrafts
+      { x: 360, y: 100, type: 'key' },       // top of first column
+      { x: 930, y: 60, type: 'key' },         // top of second column
+      { x: 2710, y: 40, type: 'key' },        // summit approach peak
+      // Souvenirs scattered across optional high/low routes
+      { x: 460, y: 170, type: 'pigment', color: 'rgba(255,255,220,', nameKey: 'sv_l6_1' },
+      { x: 860, y: 120, type: 'pigment', color: 'rgba(180,140,100,', nameKey: 'sv_l6_2' },
+      { x: 1510, y: 50, type: 'fragment', colors: ['#82bee6', '#c8dc8c', '#ffffff'], nameKey: 'sv_l6_3' },
+      { x: 2000, y: 40, type: 'pigment', color: 'rgba(220,200,140,', nameKey: 'sv_l6_4' },
+      { x: 2860, y: 30, type: 'fragment', colors: ['#a0d0f0', '#e0e8b0', '#f0e0c0'], nameKey: 'sv_l6_5' },
     ],
-    levelWidth: 2100,
+    levelWidth: 3600,
     hints: [
       { x: 100, textKey: 'l6_hint1' },
-      { x: 500, textKey: 'l6_hint2' },
-      { x: 1000, textKey: 'l6_hint3' },
-      { x: 1600, textKey: 'l6_hint4' },
+      { x: 400, textKey: 'l6_hint2' },
+      { x: 1400, textKey: 'l6_hint3' },
+      { x: 2800, textKey: 'l6_hint4' },
     ]
   },
-  // ---- Index 3: Water Lilies (1906) — Disappearing platforms + Radial paint ----
+  // ---- Index 3: Water Lilies (1906) — Disappearing platforms + Vertical towers ----
   {
     nameKey: 'l1_name', subtitleKey: 'l1_subtitle',
     paintingTitleKey: 'l1_painting_title', paintingArtistKey: 'l1_artist', paintingDescKey: 'l1_painting_desc',
@@ -2349,48 +2457,66 @@ const LEVELS = [
       accent: 'rgba(180,200,160,',
     },
     platforms: [
-      // Ground sections (lily pad style)
-      { x: 0, y: 520, w: 300, h: 40, type: 'lily' },
-      { x: 350, y: 500, w: 200, h: 35, type: 'lily', move: {type:'float', range:30, speed:1.2}, disappear: { delay: 2, reform: 3 } },
-      { x: 620, y: 470, w: 180, h: 35, type: 'lily' },
-      { x: 870, y: 440, w: 160, h: 35, type: 'lily', move: {type:'float', range:25, speed:0.9}, disappear: { delay: 2, reform: 3 } },
-      { x: 1100, y: 480, w: 220, h: 35, type: 'lily' },
-      { x: 1400, y: 450, w: 180, h: 35, type: 'lily' },
-      { x: 1650, y: 420, w: 150, h: 35, type: 'lily' },
-      // Upper platforms
-      { x: 250, y: 370, w: 120, h: 25, type: 'lily' },
-      { x: 500, y: 340, w: 130, h: 25, type: 'lily', move: {type:'float', range:20, speed:1.5}, disappear: { delay: 1.5, reform: 2.5 } },
-      { x: 750, y: 310, w: 100, h: 25, type: 'lily' },
-      { x: 1000, y: 350, w: 140, h: 25, type: 'lily' },
-      { x: 1250, y: 320, w: 120, h: 25, type: 'lily' },
-      { x: 1500, y: 350, w: 130, h: 25, type: 'lily' },
-      // High platforms
-      { x: 400, y: 240, w: 100, h: 20, type: 'lily' },
-      { x: 700, y: 220, w: 90, h: 20, type: 'lily' },
-      { x: 1150, y: 230, w: 110, h: 20, type: 'lily' },
-      // Finish area
-      { x: 1850, y: 400, w: 250, h: 40, type: 'finish' },
+      // --- Start: safe ground ---
+      { x: 0, y: 520, w: 280, h: 40, type: 'lily' },
+      // --- First lily tower: vertical climb with disappearing pads ---
+      { x: 300, y: 480, w: 160, h: 35, type: 'lily', disappear: { delay: 2.0, reform: 3.0 } },
+      { x: 350, y: 400, w: 120, h: 25, type: 'lily', disappear: { delay: 1.8, reform: 2.5 } },
+      { x: 280, y: 320, w: 130, h: 25, type: 'lily' },  // safe rest point
+      { x: 370, y: 250, w: 110, h: 25, type: 'lily', disappear: { delay: 1.5, reform: 2.5 } },
+      { x: 290, y: 180, w: 100, h: 20, type: 'lily' },  // key platform
+      // --- Horizontal bridge: alternating stable/disappearing ---
+      { x: 500, y: 350, w: 140, h: 30, type: 'lily' },   // stable landing
+      { x: 680, y: 330, w: 120, h: 25, type: 'lily', move: {type:'float', range:15, speed:1.0}, disappear: { delay: 2.0, reform: 3.0 } },
+      { x: 860, y: 350, w: 160, h: 30, type: 'lily' },   // stable rest
+      // --- Second lily tower: faster timing ---
+      { x: 900, y: 280, w: 110, h: 25, type: 'lily', disappear: { delay: 1.5, reform: 2.0 } },
+      { x: 840, y: 210, w: 120, h: 25, type: 'lily' },   // safe
+      { x: 920, y: 150, w: 100, h: 20, type: 'lily', disappear: { delay: 1.3, reform: 2.0 } },
+      { x: 850, y: 100, w: 110, h: 20, type: 'lily' },   // key platform
+      // --- Descent path: go down to lower route ---
+      { x: 1050, y: 200, w: 130, h: 25, type: 'lily' },
+      { x: 1200, y: 300, w: 160, h: 30, type: 'lily' },
+      { x: 1350, y: 400, w: 140, h: 30, type: 'lily' },
+      // --- Lower pond section: horizontal with floating pads ---
+      { x: 1530, y: 480, w: 200, h: 35, type: 'lily' },
+      { x: 1770, y: 460, w: 160, h: 35, type: 'lily', move: {type:'float', range:20, speed:0.9} },
+      { x: 1980, y: 480, w: 180, h: 35, type: 'lily' },
+      // --- Third tower: mixed vertical challenge ---
+      { x: 2050, y: 400, w: 120, h: 25, type: 'lily', disappear: { delay: 2.0, reform: 2.5 } },
+      { x: 2000, y: 320, w: 140, h: 25, type: 'lily' },  // safe
+      { x: 2080, y: 240, w: 110, h: 25, type: 'lily', move: {type:'float', range:12, speed:1.2}, disappear: { delay: 1.5, reform: 2.0 } },
+      { x: 2010, y: 170, w: 120, h: 20, type: 'lily' },  // key platform
+      // --- Optional high path (souvenirs) ---
+      { x: 1550, y: 300, w: 100, h: 20, type: 'lily', disappear: { delay: 1.5, reform: 2.5 } },
+      { x: 1700, y: 230, w: 90, h: 20, type: 'lily' },
+      { x: 1850, y: 160, w: 100, h: 20, type: 'lily', disappear: { delay: 1.8, reform: 2.5 } },
+      // --- Final approach ---
+      { x: 2200, y: 280, w: 140, h: 25, type: 'lily' },
+      { x: 2400, y: 350, w: 160, h: 30, type: 'lily' },
+      { x: 2600, y: 430, w: 200, h: 35, type: 'lily' },
+      { x: 2850, y: 460, w: 250, h: 40, type: 'finish' },
     ],
     collectibles: [
-      // Keys (3) - golden paint tubes required to unlock gate
-      { x: 420, y: 290, type: 'key' },
-      { x: 770, y: 180, type: 'key' },
-      { x: 1170, y: 190, type: 'key' },
-      // Souvenirs (5) - optional pigments and fragments
-      { x: 350, y: 460, type: 'pigment', color: 'rgba(140,200,140,', nameKey: 'sv_l1_4' },
-      { x: 650, y: 430, type: 'pigment', color: 'rgba(200,170,210,', nameKey: 'sv_l1_1' },
-      { x: 530, y: 300, type: 'pigment', color: 'rgba(240,200,220,', nameKey: 'sv_l1_2' },
-      { x: 1050, y: 310, type: 'fragment', colors: ['#8fbc8f', '#dda0dd', '#87ceeb'], nameKey: 'sv_l1_3' },
-      { x: 1530, y: 310, type: 'fragment', colors: ['#98d998', '#c0a0d0', '#90c0e0'], nameKey: 'sv_l1_5' },
+      // Keys on top of each vertical tower
+      { x: 300, y: 120, type: 'key' },       // top of tower 1
+      { x: 860, y: 40, type: 'key' },         // top of tower 2
+      { x: 2020, y: 110, type: 'key' },       // top of tower 3
+      // Souvenirs scattered across optional routes
+      { x: 690, y: 265, type: 'pigment', color: 'rgba(140,200,140,', nameKey: 'sv_l1_4' },
+      { x: 1060, y: 130, type: 'pigment', color: 'rgba(200,170,210,', nameKey: 'sv_l1_1' },
+      { x: 1710, y: 170, type: 'pigment', color: 'rgba(240,200,220,', nameKey: 'sv_l1_2' },
+      { x: 1560, y: 235, type: 'fragment', colors: ['#8fbc8f', '#dda0dd', '#87ceeb'], nameKey: 'sv_l1_3' },
+      { x: 1860, y: 100, type: 'fragment', colors: ['#98d998', '#c0a0d0', '#90c0e0'], nameKey: 'sv_l1_5' },
     ],
-    levelWidth: 2200,
+    levelWidth: 3200,
     hints: [
       { x: 100, textKey: 'l1_hint1' },
-      { x: 600, textKey: 'l1_hint2' },
-      { x: 1400, textKey: 'l1_hint4' },
+      { x: 500, textKey: 'l1_hint2' },
+      { x: 1800, textKey: 'l1_hint4' },
     ]
   },
-  // ---- Index 4: Impression, Sunrise (1872 flashback) — Tidal ----
+  // ---- Index 4: Impression, Sunrise (1872) — Tidal / Harbor Vertical ----
   {
     nameKey: 'l2_name', subtitleKey: 'l2_subtitle',
     paintingTitleKey: 'l2_painting_title', paintingArtistKey: 'l2_artist', paintingDescKey: 'l2_painting_desc',
@@ -2406,52 +2532,81 @@ const LEVELS = [
       accent: 'rgba(255,120,60,',
     },
     platforms: [
-      // Boat/dock platforms — all well above tidal high-water mark (520)
+      // --- Harbor entrance: wide safe dock ---
       { x: 0, y: 460, w: 350, h: 40, type: 'dock' },
-      { x: 400, y: 440, w: 180, h: 30, type: 'boat', move: {type:'float', range:10, speed:0.8} },
-      { x: 640, y: 420, w: 200, h: 30, type: 'boat' },
-      { x: 900, y: 450, w: 170, h: 30, type: 'dock' },
-      { x: 1130, y: 410, w: 190, h: 30, type: 'boat', move: {type:'float', range:10, speed:1.0} },
-      { x: 1380, y: 430, w: 160, h: 30, type: 'dock' },
-      { x: 1600, y: 400, w: 180, h: 30, type: 'boat' },
-      // Crane/mast platforms
-      { x: 300, y: 400, w: 100, h: 20, type: 'mast' },
-      { x: 550, y: 370, w: 110, h: 20, type: 'mast' },
-      { x: 800, y: 390, w: 90, h: 20, type: 'mast' },
-      { x: 1050, y: 360, w: 120, h: 20, type: 'mast' },
-      { x: 1300, y: 380, w: 100, h: 20, type: 'mast' },
-      { x: 1520, y: 350, w: 110, h: 20, type: 'mast' },
-      // Tidal platforms — these submerge/emerge with the tide
-      { x: 200, y: 530, w: 140, h: 20, type: 'dock', tidal: true },
-      { x: 500, y: 540, w: 120, h: 20, type: 'dock', tidal: true },
-      { x: 1000, y: 535, w: 130, h: 20, type: 'dock', tidal: true },
-      // High platforms
-      { x: 450, y: 270, w: 80, h: 18, type: 'mast' },
-      { x: 750, y: 250, w: 90, h: 18, type: 'mast' },
-      { x: 1200, y: 260, w: 100, h: 18, type: 'mast' },
-      // Finish
-      { x: 1850, y: 380, w: 250, h: 40, type: 'finish' },
+      // --- First ship section: climb the masts ---
+      { x: 380, y: 440, w: 180, h: 30, type: 'boat', move: {type:'float', range:8, speed:0.8} },
+      { x: 420, y: 380, w: 90, h: 20, type: 'mast' },
+      { x: 460, y: 310, w: 80, h: 18, type: 'mast' },
+      { x: 410, y: 240, w: 100, h: 18, type: 'mast' },
+      { x: 470, y: 170, w: 90, h: 18, type: 'mast' },  // top of first mast
+      // --- Horizontal crossing at height ---
+      { x: 600, y: 200, w: 110, h: 20, type: 'mast' },
+      { x: 740, y: 220, w: 100, h: 18, type: 'mast', move: {type:'move', range:50, speed:0.4} },
+      // --- Second ship: tidal dock below, masts above ---
+      { x: 880, y: 450, w: 200, h: 30, type: 'dock' },
+      { x: 850, y: 380, w: 90, h: 20, type: 'mast' },
+      { x: 920, y: 310, w: 100, h: 18, type: 'mast' },
+      { x: 870, y: 240, w: 80, h: 18, type: 'mast' },
+      { x: 940, y: 170, w: 90, h: 18, type: 'mast' },
+      // --- Tidal platforms: only accessible at low tide ---
+      { x: 250, y: 530, w: 120, h: 20, type: 'dock', tidal: true },
+      { x: 650, y: 540, w: 140, h: 20, type: 'dock', tidal: true },
+      { x: 1100, y: 535, w: 130, h: 20, type: 'dock', tidal: true },
+      { x: 1550, y: 530, w: 120, h: 20, type: 'dock', tidal: true },
+      { x: 2100, y: 540, w: 140, h: 20, type: 'dock', tidal: true },
+      // --- Mid-harbor: boat hop section ---
+      { x: 1100, y: 420, w: 160, h: 30, type: 'boat', move: {type:'float', range:10, speed:1.0} },
+      { x: 1300, y: 400, w: 140, h: 30, type: 'boat' },
+      { x: 1480, y: 430, w: 170, h: 30, type: 'dock' },
+      // --- Crane tower: tall vertical structure ---
+      { x: 1500, y: 370, w: 80, h: 20, type: 'mast' },
+      { x: 1550, y: 300, w: 90, h: 18, type: 'mast' },
+      { x: 1500, y: 230, w: 100, h: 18, type: 'mast' },
+      { x: 1560, y: 160, w: 80, h: 18, type: 'mast' },
+      { x: 1510, y: 100, w: 110, h: 18, type: 'mast' },  // crane top
+      // --- High rigging path (optional upper route) ---
+      { x: 1680, y: 130, w: 100, h: 18, type: 'mast', move: {type:'float', range:8, speed:0.6} },
+      { x: 1850, y: 150, w: 90, h: 18, type: 'mast' },
+      { x: 2000, y: 180, w: 80, h: 18, type: 'mast', move: {type:'float', range:10, speed:0.5} },
+      // --- Lower route: boats and docks ---
+      { x: 1700, y: 440, w: 180, h: 30, type: 'boat', move: {type:'float', range:10, speed:0.9} },
+      { x: 1950, y: 420, w: 160, h: 30, type: 'dock' },
+      { x: 2150, y: 450, w: 140, h: 30, type: 'boat' },
+      // --- Second crane: shorter vertical ---
+      { x: 2200, y: 380, w: 90, h: 20, type: 'mast' },
+      { x: 2250, y: 300, w: 100, h: 18, type: 'mast' },
+      { x: 2200, y: 220, w: 90, h: 18, type: 'mast' },
+      // --- Final approach ---
+      { x: 2400, y: 350, w: 140, h: 30, type: 'dock' },
+      { x: 2580, y: 400, w: 160, h: 30, type: 'boat' },
+      { x: 2780, y: 430, w: 200, h: 30, type: 'dock' },
+      { x: 3000, y: 400, w: 250, h: 40, type: 'finish' },
     ],
     collectibles: [
-      // Keys (3)
-      { x: 470, y: 230, type: 'key' },
-      { x: 770, y: 210, type: 'key' },
-      { x: 1200, y: 220, type: 'key' },
-      // Souvenirs (5)
-      { x: 330, y: 360, type: 'pigment', color: 'rgba(230,160,80,', nameKey: 'sv_l2_1' },
-      { x: 580, y: 330, type: 'pigment', color: 'rgba(255,140,60,', nameKey: 'sv_l2_2' },
-      { x: 830, y: 350, type: 'fragment', colors: ['#e6a050', '#6a7896', '#d4500a'], nameKey: 'sv_l2_3' },
-      { x: 1330, y: 340, type: 'pigment', color: 'rgba(100,120,160,', nameKey: 'sv_l2_4' },
-      { x: 1550, y: 310, type: 'fragment', colors: ['#e09040', '#7888a6', '#f06030'], nameKey: 'sv_l2_5' },
+      // Keys on top of each mast structure
+      { x: 480, y: 110, type: 'key' },       // top of first mast
+      { x: 950, y: 110, type: 'key' },        // top of second mast
+      { x: 1520, y: 40, type: 'key' },        // crane tower top
+      // Souvenirs across high/low routes and tidal-gated areas
+      { x: 610, y: 140, type: 'pigment', color: 'rgba(230,160,80,', nameKey: 'sv_l2_1' },
+      { x: 660, y: 480, type: 'pigment', color: 'rgba(255,140,60,', nameKey: 'sv_l2_2' },  // tidal access only
+      { x: 1690, y: 70, type: 'fragment', colors: ['#e6a050', '#6a7896', '#d4500a'], nameKey: 'sv_l2_3' },
+      { x: 1860, y: 90, type: 'pigment', color: 'rgba(100,120,160,', nameKey: 'sv_l2_4' },
+      { x: 2260, y: 160, type: 'fragment', colors: ['#e09040', '#7888a6', '#f06030'], nameKey: 'sv_l2_5' },
     ],
-    levelWidth: 2200,
+    levelWidth: 3300,
     hints: [
       { x: 100, textKey: 'l2_hint1' },
-      { x: 700, textKey: 'l2_hint2' },
-      { x: 1500, textKey: 'l2_hint3' },
+      { x: 900, textKey: 'l2_hint2' },
+      { x: 2200, textKey: 'l2_hint3' },
     ]
   },
   // ---- Index 5: The Japanese Bridge (1899) — Season Shift ----
+  // Design: Multi-level bridge with under/on/above paths, vertical vine towers,
+  // hidden garden alcoves, ascending torii gate finale. ~3500px wide.
+  // Tier 1 (ground/under-bridge): y=530-490, Tier 2 (bridge deck): y=400-350,
+  // Tier 3 (canopy/above): y=250-150. Camera range [-100,200], death at y=600.
   {
     nameKey: 'l3_name', subtitleKey: 'l3_subtitle',
     paintingTitleKey: 'l3_painting_title', paintingArtistKey: 'l3_artist', paintingDescKey: 'l3_painting_desc',
@@ -2466,47 +2621,103 @@ const LEVELS = [
       accent: 'rgba(220,180,200,',
     },
     platforms: [
-      // Garden path
-      { x: 0, y: 530, w: 280, h: 40, type: 'stone' },
-      { x: 340, y: 510, w: 200, h: 35, type: 'stone' },
-      { x: 600, y: 490, w: 180, h: 35, type: 'stone' },
-      // Bridge arch (ascending)
-      { x: 840, y: 460, w: 150, h: 30, type: 'bridge' },
-      { x: 1020, y: 410, w: 160, h: 30, type: 'bridge' },
-      { x: 1210, y: 380, w: 180, h: 30, type: 'bridge' },
-      { x: 1420, y: 410, w: 160, h: 30, type: 'bridge' },
-      { x: 1610, y: 460, w: 150, h: 30, type: 'bridge' },
-      // Vine platforms
-      { x: 200, y: 380, w: 110, h: 22, type: 'vine', move: {type:'move', range:60, speed:0.5} },
-      { x: 450, y: 350, w: 100, h: 22, type: 'vine' },
-      { x: 700, y: 340, w: 120, h: 22, type: 'vine', move: {type:'float', range:22, speed:1.1} },
-      { x: 950, y: 300, w: 100, h: 22, type: 'vine' },
-      { x: 1250, y: 280, w: 110, h: 22, type: 'vine' },
-      { x: 1500, y: 310, w: 100, h: 22, type: 'vine' },
-      // High flower platforms
-      { x: 350, y: 250, w: 90, h: 18, type: 'vine' },
-      { x: 650, y: 230, w: 80, h: 18, type: 'vine' },
-      { x: 1100, y: 210, w: 100, h: 18, type: 'vine' },
-      // Path after bridge
-      { x: 1800, y: 490, w: 250, h: 40, type: 'finish' },
+      // === ZONE A: Garden Entrance (x 0–600) ===
+      // Ground path with stepping stones
+      { x: 0, y: 530, w: 300, h: 40, type: 'stone' },
+      { x: 360, y: 510, w: 140, h: 35, type: 'stone' },
+      { x: 540, y: 490, w: 120, h: 35, type: 'stone' },
+      // Vine tower #1 — vertical climb up from ground to canopy
+      { x: 160, y: 430, w: 90, h: 22, type: 'vine' },
+      { x: 80, y: 350, w: 100, h: 22, type: 'vine', move: {type:'float', range:18, speed:0.9} },
+      { x: 180, y: 280, w: 90, h: 22, type: 'vine' },
+      { x: 90, y: 210, w: 100, h: 22, type: 'vine' },
+      // Canopy flower shelf (high reward path)
+      { x: 220, y: 170, w: 110, h: 18, type: 'vine' },
+      { x: 380, y: 150, w: 100, h: 18, type: 'vine', move: {type:'move', range:50, speed:0.4} },
+
+      // === ZONE B: Under-Bridge Passage (x 600–1400) ===
+      // Low path beneath the arched bridge — hidden route
+      { x: 680, y: 530, w: 120, h: 35, type: 'stone' },
+      { x: 850, y: 540, w: 140, h: 30, type: 'stone' },
+      { x: 1030, y: 530, w: 130, h: 35, type: 'stone' },
+      { x: 1200, y: 520, w: 110, h: 30, type: 'stone' },
+      // Moving platform under bridge arch center
+      { x: 930, y: 490, w: 100, h: 25, type: 'stone', move: {type:'move', range:80, speed:0.6} },
+
+      // === ZONE B: Bridge Deck (x 600–1400) — Main Route ===
+      // Ascending arch left side
+      { x: 620, y: 430, w: 130, h: 30, type: 'bridge' },
+      { x: 780, y: 390, w: 150, h: 30, type: 'bridge' },
+      // Bridge peak — wide platform
+      { x: 970, y: 360, w: 200, h: 30, type: 'bridge' },
+      // Descending arch right side
+      { x: 1200, y: 390, w: 150, h: 30, type: 'bridge' },
+      { x: 1380, y: 430, w: 130, h: 30, type: 'bridge' },
+
+      // === ZONE B: Above-Bridge Canopy (x 700–1300) ===
+      // Vine climb from bridge peak upward
+      { x: 1020, y: 280, w: 90, h: 22, type: 'vine' },
+      { x: 920, y: 220, w: 100, h: 22, type: 'vine', move: {type:'float', range:20, speed:1.0} },
+      { x: 1060, y: 160, w: 90, h: 22, type: 'vine' },
+      // Canopy crossing — floating vine platforms
+      { x: 780, y: 190, w: 80, h: 18, type: 'vine', move: {type:'move', range:40, speed:0.5} },
+      { x: 600, y: 210, w: 90, h: 18, type: 'vine' },
+
+      // === ZONE C: Wisteria Maze (x 1500–2300) ===
+      // Ground path with gaps requiring vine detours
+      { x: 1540, y: 490, w: 160, h: 35, type: 'stone' },
+      { x: 1780, y: 510, w: 120, h: 35, type: 'stone' },
+      { x: 1960, y: 490, w: 140, h: 35, type: 'stone' },
+      // Vine tower #2 — mid-section vertical climb
+      { x: 1600, y: 400, w: 90, h: 22, type: 'vine' },
+      { x: 1700, y: 330, w: 100, h: 22, type: 'vine', move: {type:'float', range:22, speed:1.1} },
+      { x: 1600, y: 260, w: 90, h: 22, type: 'vine' },
+      { x: 1720, y: 190, w: 100, h: 22, type: 'vine' },
+      // Wisteria hanging platforms (mid-height connections)
+      { x: 1880, y: 380, w: 110, h: 22, type: 'vine', move: {type:'move', range:70, speed:0.45} },
+      { x: 2060, y: 350, w: 100, h: 22, type: 'vine' },
+      { x: 2200, y: 390, w: 120, h: 22, type: 'vine' },
+      // High wisteria canopy
+      { x: 1850, y: 220, w: 90, h: 18, type: 'vine' },
+      { x: 2010, y: 180, w: 80, h: 18, type: 'vine', move: {type:'move', range:45, speed:0.5} },
+      { x: 2170, y: 210, w: 100, h: 18, type: 'vine' },
+
+      // === ZONE D: Torii Gate Ascent & Finale (x 2300–3400) ===
+      // Ground stepping stones
+      { x: 2350, y: 500, w: 130, h: 35, type: 'stone' },
+      { x: 2530, y: 480, w: 140, h: 35, type: 'stone' },
+      // Torii gate structure — 3 tiers of horizontal beams
+      { x: 2700, y: 440, w: 180, h: 30, type: 'bridge' },
+      { x: 2720, y: 340, w: 160, h: 25, type: 'bridge' },
+      { x: 2740, y: 250, w: 140, h: 22, type: 'bridge' },
+      // Side climb vines for torii ascent
+      { x: 2640, y: 390, w: 70, h: 22, type: 'vine' },
+      { x: 2910, y: 380, w: 70, h: 22, type: 'vine' },
+      { x: 2650, y: 290, w: 70, h: 22, type: 'vine' },
+      { x: 2900, y: 300, w: 70, h: 22, type: 'vine', move: {type:'float', range:15, speed:0.8} },
+      // Descending garden from torii peak
+      { x: 2950, y: 350, w: 120, h: 25, type: 'stone' },
+      { x: 3100, y: 400, w: 130, h: 30, type: 'stone' },
+      // Finish — wide landing
+      { x: 3250, y: 430, w: 250, h: 40, type: 'finish' },
     ],
     collectibles: [
-      // Keys (3)
-      { x: 370, y: 210, type: 'key' },
-      { x: 670, y: 190, type: 'key' },
-      { x: 1100, y: 170, type: 'key' },
-      // Souvenirs (5)
-      { x: 230, y: 340, type: 'pigment', color: 'rgba(100,180,100,', nameKey: 'sv_l3_1' },
-      { x: 480, y: 310, type: 'pigment', color: 'rgba(180,140,200,', nameKey: 'sv_l3_2' },
-      { x: 730, y: 300, type: 'fragment', colors: ['#64a064', '#b48cc8', '#dc8cac'], nameKey: 'sv_l3_3' },
-      { x: 980, y: 260, type: 'pigment', color: 'rgba(220,180,200,', nameKey: 'sv_l3_4' },
-      { x: 1530, y: 270, type: 'fragment', colors: ['#70b070', '#a080c0', '#e0a0b0'], nameKey: 'sv_l3_5' },
+      // Keys (3) — one per major vertical structure
+      { x: 110, y: 170, type: 'key' },         // top of vine tower #1
+      { x: 1060, y: 120, type: 'key' },         // above bridge canopy peak
+      { x: 2760, y: 210, type: 'key' },         // top of torii gate
+      // Souvenirs (5) — spread across hidden/optional paths
+      { x: 400, y: 110, type: 'pigment', color: 'rgba(100,180,100,', nameKey: 'sv_l3_1' },   // canopy flower shelf
+      { x: 940, y: 450, type: 'pigment', color: 'rgba(180,140,200,', nameKey: 'sv_l3_2' },   // under-bridge passage
+      { x: 620, y: 170, type: 'fragment', colors: ['#64a064', '#b48cc8', '#dc8cac'], nameKey: 'sv_l3_3' },  // above-bridge canopy left
+      { x: 1740, y: 150, type: 'pigment', color: 'rgba(220,180,200,', nameKey: 'sv_l3_4' },  // vine tower #2 top
+      { x: 2030, y: 140, type: 'fragment', colors: ['#70b070', '#a080c0', '#e0a0b0'], nameKey: 'sv_l3_5' },  // high wisteria canopy
     ],
-    levelWidth: 2150,
+    levelWidth: 3500,
     hints: [
       { x: 100, textKey: 'l3_hint1' },
-      { x: 800, textKey: 'l3_hint2' },
-      { x: 1600, textKey: 'l3_hint3' },
+      { x: 900, textKey: 'l3_hint2' },
+      { x: 2600, textKey: 'l3_hint3' },
     ]
   }
 ];
@@ -4335,6 +4546,98 @@ const Game = {
       ctx.restore();
     }
 
+    // === EXIT DIRECTION INDICATOR (screen-space) ===
+    // When the finish platform is off-screen, show a golden arrow at the
+    // screen edge pointing toward the exit — core wayfinding for large levels.
+    const finish = this.platforms.find(p => p.type === 'finish');
+    if (finish && this.state === 'playing') {
+      const cam = this.camera;
+      const fCx = finish.x + finish.w / 2 - cam.x; // finish center in screen space
+      const fCy = finish.y - cam.y;
+      const margin = 40; // arrow inset from edge
+      const onScreen = fCx > -finish.w && fCx < w + finish.w && fCy > -60 && fCy < h + 60;
+
+      if (!onScreen) {
+        // Clamp arrow position to screen edges
+        const ax = Math.max(margin, Math.min(w - margin, fCx));
+        const ay = Math.max(margin, Math.min(h - margin - 20, fCy));
+        // Angle from arrow to finish
+        const angle = Math.atan2(fCy - ay, fCx - ax);
+        const pulse = 0.55 + 0.25 * Math.sin(this.time * 3);
+
+        ctx.save();
+        ctx.globalAlpha = pulse;
+        ctx.translate(ax, ay);
+        ctx.rotate(angle);
+
+        // Arrow body
+        ctx.fillStyle = 'rgba(245,220,140,0.9)';
+        ctx.strokeStyle = 'rgba(255,240,180,0.7)';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(16, 0);        // tip
+        ctx.lineTo(-4, -7);       // top wing
+        ctx.lineTo(-4, -3);
+        ctx.lineTo(-14, -3);      // tail top
+        ctx.lineTo(-14, 3);       // tail bottom
+        ctx.lineTo(-4, 3);
+        ctx.lineTo(-4, 7);        // bottom wing
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Glow halo around arrow
+        ctx.globalCompositeOperation = 'screen';
+        const aglow = ctx.createRadialGradient(0, 0, 2, 0, 0, 22);
+        aglow.addColorStop(0, `rgba(255,240,180,${pulse * 0.4})`);
+        aglow.addColorStop(1, 'rgba(255,240,180,0)');
+        ctx.fillStyle = aglow;
+        ctx.fillRect(-22, -22, 44, 44);
+
+        ctx.restore();
+
+        // Small label below arrow — "EXIT / 出口"
+        ctx.save();
+        ctx.globalAlpha = pulse * 0.7;
+        ctx.font = '10px serif';
+        ctx.fillStyle = 'rgba(245,220,140,0.8)';
+        ctx.textAlign = 'center';
+        ctx.fillText(currentLang === 'en' ? 'EXIT' : '出口', ax, ay + 18);
+        ctx.restore();
+      }
+
+      // === GUIDE FIREFLIES — golden particles drifting toward exit ===
+      // Appear in the latter half of the level to subtly pull the player forward.
+      const playerProgress = (this.player.x / (LEVELS[this.currentLevel].levelWidth || 2000));
+      if (playerProgress > 0.35) {
+        ctx.save();
+        ctx.globalCompositeOperation = 'screen';
+        const guideSeed = this.time * 0.6;
+        const guideCount = 6;
+        for (let gi = 0; gi < guideCount; gi++) {
+          // Particles spawn ahead of the player, drift toward finish
+          const phase = (guideSeed + gi * 1.7) % 5;
+          const lifeT = phase / 5; // 0→1 lifecycle
+          const startX = this.player.x + 80 + gi * 60;
+          const endX = finish.x + finish.w / 2;
+          const gx = startX + (endX - startX) * lifeT * 0.15;
+          const gy = this.player.y - 30 + Math.sin(guideSeed * 2 + gi * 3) * 40;
+          const ga = Math.sin(lifeT * Math.PI) * 0.35; // fade in/out
+          if (ga > 0.02) {
+            const sx = gx - cam.x;
+            const sy = gy - cam.y;
+            if (sx > -20 && sx < w + 20 && sy > -20 && sy < h + 20) {
+              ctx.fillStyle = `rgba(255,235,160,${ga})`;
+              ctx.beginPath();
+              ctx.arc(sx, sy, 1.8 + Math.sin(this.time * 4 + gi) * 0.6, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          }
+        }
+        ctx.restore();
+      }
+    }
+
     // Screen-space effects
     this.drawScreenEffects(ctx, w, h);
 
@@ -4394,27 +4697,43 @@ const Game = {
       const cx = p.x + p.w / 2;
       const cy = p.y;
 
-      // Painting frame on an easel appearance
-      // Pillar of golden light
+      // === TALL BEACON PILLAR — visible from far away ===
+      // Extends 600px upward (well above camera ceiling) so the glow
+      // peeks into view even when the player is at a different height tier
       ctx.save();
       ctx.globalCompositeOperation = 'screen';
-      for (let i = 0; i < 3; i++) {
-        const pillarGrad = ctx.createLinearGradient(cx, cy - 250, cx, cy + 10);
+      const beaconH = 600;
+      for (let i = 0; i < 4; i++) {
+        const pillarGrad = ctx.createLinearGradient(cx, cy - beaconH, cx, cy + 10);
         pillarGrad.addColorStop(0, 'rgba(245,234,208,0)');
-        pillarGrad.addColorStop(0.3, `rgba(245,234,208,${glowAlpha * 0.05 * (3-i)})`);
-        pillarGrad.addColorStop(0.8, `rgba(245,220,160,${glowAlpha * 0.12 * (3-i)})`);
-        pillarGrad.addColorStop(1, `rgba(245,220,160,${glowAlpha * 0.2 * (3-i)})`);
+        pillarGrad.addColorStop(0.15, `rgba(245,234,208,${glowAlpha * 0.02 * (4-i)})`);
+        pillarGrad.addColorStop(0.5, `rgba(245,230,180,${glowAlpha * 0.06 * (4-i)})`);
+        pillarGrad.addColorStop(0.8, `rgba(245,220,160,${glowAlpha * 0.12 * (4-i)})`);
+        pillarGrad.addColorStop(1, `rgba(245,220,160,${glowAlpha * 0.22 * (4-i)})`);
         ctx.fillStyle = pillarGrad;
-        const w = 40 + i * 25;
-        ctx.fillRect(cx - w, cy - 250, w * 2, 260);
+        const w = 30 + i * 22;
+        ctx.fillRect(cx - w, cy - beaconH, w * 2, beaconH + 10);
       }
       ctx.restore();
 
-      // Floating sparkles around finish
+      // === BEACON PULSE RING — periodic expanding ring at finish ===
       ctx.save();
-      for (let s = 0; s < 8; s++) {
-        const sx = cx + Math.sin(t * 1.5 + s * 0.8) * (40 + s * 8);
-        const sy = cy - 20 - Math.abs(Math.sin(t * 0.8 + s * 1.2)) * 80;
+      ctx.globalCompositeOperation = 'screen';
+      const ringPhase = (t * 0.5) % 1;
+      const ringR = 20 + ringPhase * 120;
+      const ringA = (1 - ringPhase) * 0.25 * glowAlpha;
+      ctx.strokeStyle = `rgba(255,240,180,${ringA})`;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(cx, cy - 10, ringR, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+
+      // Floating sparkles around finish — increased count and range
+      ctx.save();
+      for (let s = 0; s < 14; s++) {
+        const sx = cx + Math.sin(t * 1.5 + s * 0.55) * (40 + s * 10);
+        const sy = cy - 20 - Math.abs(Math.sin(t * 0.8 + s * 1.2)) * 140;
         const sa = 0.3 + Math.sin(t * 3 + s) * 0.2;
         ctx.fillStyle = `rgba(255,240,200,${sa})`;
         ctx.beginPath();
