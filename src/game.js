@@ -2193,10 +2193,11 @@ const LEVELS = [
       accent: 'rgba(60,120,60,',
     },
     platforms: [
-      // --- Start area: ground floor ---
-      { x: 40, y: 500, w: 220, h: 24, type: 'shelf' },
-      { x: 280, y: 450, w: 80, h: 60, type: 'easel' },
-      { x: 400, y: 400, w: 140, h: 20, type: 'shelf' },
+      // --- Start area: ground floor (generous for first level) ---
+      { x: 40, y: 500, w: 280, h: 24, type: 'shelf' },
+      { x: 280, y: 450, w: 100, h: 60, type: 'easel' },
+      { x: 400, y: 400, w: 160, h: 20, type: 'shelf' },
+      { x: 580, y: 460, w: 180, h: 24, type: 'shelf' },  // rest point before climb
       // --- First vertical climb: easel staircase ---
       { x: 560, y: 350, w: 70, h: 55, type: 'easel' },
       { x: 660, y: 300, w: 120, h: 18, type: 'frame', move: { type: 'move', range: 60, speed: 0.4 } },
@@ -2214,7 +2215,7 @@ const LEVELS = [
       { x: 1450, y: 300, w: 140, h: 22, type: 'shelf' },
       { x: 1600, y: 250, w: 80, h: 55, type: 'easel' },
       { x: 1500, y: 180, w: 100, h: 18, type: 'frame', move: { type: 'move', range: 80, speed: 0.5 } },
-      { x: 1750, y: 320, w: 120, h: 20, type: 'shelf' },
+      { x: 1730, y: 320, w: 170, h: 22, type: 'shelf' },
       { x: 1880, y: 250, w: 70, h: 55, type: 'easel' },
       { x: 1780, y: 160, w: 100, h: 18, type: 'frame' },
       { x: 1950, y: 120, w: 140, h: 20, type: 'shelf' },
@@ -2235,10 +2236,10 @@ const LEVELS = [
       { x: 3200, y: 450, w: 200, h: 30, type: 'finish' },
     ],
     collectibles: [
-      // Keys at different vertical heights
-      { x: 910, y: 130, type: 'key' },       // top of first climb
-      { x: 1060, y: 40, type: 'key' },       // top of central tower
-      { x: 1960, y: 60, type: 'key' },       // top of dark maze
+      // Keys at accessible vertical heights (forgiving for first level)
+      { x: 910, y: 160, type: 'key' },       // top of first climb
+      { x: 1060, y: 60, type: 'key' },        // top of central tower
+      { x: 1960, y: 80, type: 'key' },        // top of dark maze
       // Souvenirs - exploration rewards
       { x: 670, y: 230, type: 'pigment', color: 'rgba(50,50,50,', nameKey: 'sv_l4_1' },
       { x: 1110, y: 240, type: 'pigment', color: 'rgba(180,160,100,', nameKey: 'sv_l4_2' },
@@ -2296,9 +2297,11 @@ const LEVELS = [
       { x: 770, y: 250, w: 120, h: 16, type: 'branch', move: { type: 'float', range: 5, speed: 1.0 } },
       { x: 700, y: 190, w: 100, h: 16, type: 'branch' },
       { x: 800, y: 140, w: 140, h: 20, type: 'hedge' },
-      // --- Wind-assisted gap: must use wind gust to reach far platform ---
-      { x: 1050, y: 180, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 8, speed: 0.7 } },
-      { x: 1250, y: 200, w: 120, h: 20, type: 'bench' },
+      // --- Wind-assisted gap: 310px gap REQUIRES wind gust to cross ---
+      // Normal max jump: ~243px. With wind (+120px/s × 0.87s ≈ +104px): ~347px. Gap: 310px.
+      // Safety net below catches failed attempts — player backtracks to tree base.
+      { x: 1060, y: 460, w: 160, h: 24, type: 'hedge' },  // catch platform below gap
+      { x: 1250, y: 200, w: 140, h: 20, type: 'bench' },
       // --- Descending section: go down into valley ---
       { x: 1200, y: 300, w: 100, h: 16, type: 'branch' },
       { x: 1100, y: 380, w: 140, h: 26, type: 'hedge' },
@@ -2320,9 +2323,9 @@ const LEVELS = [
       { x: 2700, y: 150, w: 120, h: 16, type: 'branch' },
       // --- Descent to finish ---
       { x: 2450, y: 250, w: 120, h: 20, type: 'bench' },
-      { x: 2600, y: 320, w: 140, h: 26, type: 'hedge' },
+      { x: 2600, y: 320, w: 160, h: 26, type: 'hedge' },  // widened rest point
       { x: 2800, y: 380, w: 100, h: 16, type: 'branch', move: { type: 'float', range: 6, speed: 0.9 } },
-      { x: 2950, y: 430, w: 160, h: 26, type: 'hedge' },
+      { x: 2950, y: 430, w: 200, h: 26, type: 'hedge' },  // wide safe zone before finish
       { x: 3150, y: 380, w: 120, h: 20, type: 'bench' },
       { x: 3300, y: 330, w: 100, h: 16, type: 'branch' },
       { x: 3450, y: 450, w: 200, h: 30, type: 'finish' },
@@ -2342,7 +2345,7 @@ const LEVELS = [
     levelWidth: 3700,
     hints: [
       { x: 100, textKey: 'l5_hint1' },
-      { x: 700, textKey: 'l5_hint2' },
+      { x: 780, textKey: 'l5_hint2' },
       { x: 1700, textKey: 'l5_hint3' },
       { x: 2800, textKey: 'l5_hint4' },
     ]
@@ -2457,8 +2460,10 @@ const LEVELS = [
       accent: 'rgba(180,200,160,',
     },
     platforms: [
-      // --- Start: safe ground ---
+      // --- Start: safe ground + mechanic tutorial ---
       { x: 0, y: 520, w: 280, h: 40, type: 'lily' },
+      // Tutorial pad: generous 3s delay, safe height (fall back to start platform)
+      { x: 180, y: 480, w: 130, h: 30, type: 'lily', disappear: { delay: 3.0, reform: 2.0 } },
       // --- First lily tower: vertical climb with disappearing pads ---
       { x: 300, y: 480, w: 160, h: 35, type: 'lily', disappear: { delay: 2.0, reform: 3.0 } },
       { x: 350, y: 400, w: 120, h: 25, type: 'lily', disappear: { delay: 1.8, reform: 2.5 } },
@@ -2571,7 +2576,7 @@ const LEVELS = [
       { x: 2000, y: 180, w: 80, h: 18, type: 'mast', move: {type:'float', range:10, speed:0.5} },
       // --- Lower route: boats and docks ---
       { x: 1700, y: 440, w: 180, h: 30, type: 'boat', move: {type:'float', range:10, speed:0.9} },
-      { x: 1950, y: 420, w: 160, h: 30, type: 'dock' },
+      { x: 1930, y: 420, w: 200, h: 35, type: 'dock' },
       { x: 2150, y: 450, w: 140, h: 30, type: 'boat' },
       // --- Second crane: shorter vertical ---
       { x: 2200, y: 380, w: 90, h: 20, type: 'mast' },
@@ -2606,7 +2611,7 @@ const LEVELS = [
   // Design: Multi-level bridge with under/on/above paths, vertical vine towers,
   // hidden garden alcoves, ascending torii gate finale. ~3500px wide.
   // Tier 1 (ground/under-bridge): y=530-490, Tier 2 (bridge deck): y=400-350,
-  // Tier 3 (canopy/above): y=250-150. Camera range [-100,200], death at y=600.
+  // Tier 3 (canopy/above): y=250-150. Camera range [-100,200], death at y=700.
   {
     nameKey: 'l3_name', subtitleKey: 'l3_subtitle',
     paintingTitleKey: 'l3_painting_title', paintingArtistKey: 'l3_artist', paintingDescKey: 'l3_painting_desc',
@@ -2677,24 +2682,24 @@ const LEVELS = [
       { x: 1880, y: 380, w: 110, h: 22, type: 'vine', move: {type:'move', range:70, speed:0.45} },
       { x: 2060, y: 350, w: 100, h: 22, type: 'vine' },
       { x: 2200, y: 390, w: 120, h: 22, type: 'vine' },
-      // High wisteria canopy
-      { x: 1850, y: 220, w: 90, h: 18, type: 'vine' },
-      { x: 2010, y: 180, w: 80, h: 18, type: 'vine', move: {type:'move', range:45, speed:0.5} },
-      { x: 2170, y: 210, w: 100, h: 18, type: 'vine' },
+      // High wisteria canopy (narrow — expert-level precision)
+      { x: 1850, y: 220, w: 75, h: 18, type: 'vine' },
+      { x: 2010, y: 180, w: 65, h: 18, type: 'vine', move: {type:'move', range:50, speed:0.55} },
+      { x: 2170, y: 210, w: 80, h: 18, type: 'vine' },
 
       // === ZONE D: Torii Gate Ascent & Finale (x 2300–3400) ===
       // Ground stepping stones
       { x: 2350, y: 500, w: 130, h: 35, type: 'stone' },
       { x: 2530, y: 480, w: 140, h: 35, type: 'stone' },
-      // Torii gate structure — 3 tiers of horizontal beams
+      // Torii gate structure — 3 tiers of horizontal beams (narrowing upward)
       { x: 2700, y: 440, w: 180, h: 30, type: 'bridge' },
-      { x: 2720, y: 340, w: 160, h: 25, type: 'bridge' },
-      { x: 2740, y: 250, w: 140, h: 22, type: 'bridge' },
-      // Side climb vines for torii ascent
-      { x: 2640, y: 390, w: 70, h: 22, type: 'vine' },
-      { x: 2910, y: 380, w: 70, h: 22, type: 'vine' },
-      { x: 2650, y: 290, w: 70, h: 22, type: 'vine' },
-      { x: 2900, y: 300, w: 70, h: 22, type: 'vine', move: {type:'float', range:15, speed:0.8} },
+      { x: 2730, y: 340, w: 130, h: 22, type: 'bridge' },
+      { x: 2755, y: 250, w: 110, h: 20, type: 'bridge' },
+      // Side climb vines for torii ascent (narrow — precision required)
+      { x: 2645, y: 390, w: 55, h: 22, type: 'vine' },
+      { x: 2920, y: 380, w: 55, h: 22, type: 'vine' },
+      { x: 2660, y: 290, w: 55, h: 22, type: 'vine' },
+      { x: 2910, y: 300, w: 55, h: 22, type: 'vine', move: {type:'float', range:18, speed:0.9} },
       // Descending garden from torii peak
       { x: 2950, y: 350, w: 120, h: 25, type: 'stone' },
       { x: 3100, y: 400, w: 130, h: 30, type: 'stone' },
