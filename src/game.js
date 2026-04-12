@@ -73,7 +73,7 @@ const LANG = {
     l3_name: '日本桥', l3_nameEn: 'The Japanese Bridge', l3_subtitle: '1899 · 吉维尼花园',
     l3_painting_title: '日本桥 The Japanese Bridge', l3_artist: 'Claude Monet, 1899',
     l3_painting_desc: '莫奈在吉维尼花园中建造了一座日式拱桥，并反复描绘它。浓郁的绿色、紫色和粉色交织在一起，紫藤花从桥上垂落，与水面的倒影融为一体。这是莫奈晚期对色彩与形式的极致探索——自然与艺术完美合一。',
-    l3_hint1: '穿越莫奈的秘密花园', l3_hint2: '登上日本桥，俯瞰花园全景', l3_hint3: '画作的尽头等待着你',
+    l3_hint1: '穿越莫奈的秘密花园', l3_hint2: '春天的桥下有隐藏小路，夏天和秋天有不同的藤蔓路径', l3_hint3: '留意季节变化——不同的季节会显现不同的路',
     // Souvenirs
     sv_l1_1: '紫色梦幻颜料', sv_l1_2: '粉色花瓣颜料', sv_l1_3: '睡莲画作碎片',
     sv_l1_4: '莲影绿颜料', sv_l1_5: '倒影画作碎片',
@@ -123,7 +123,7 @@ const LANG = {
     l4_name: '穿绿裙的女人', l4_subtitle: '1866 · 巴黎画室',
     l4_painting_title: '穿绿裙的女人 Woman in the Green Dress', l4_artist: 'Claude Monet, 1866',
     l4_painting_desc: '这幅画是莫奈在沙龙展出的成名作，画中的模特正是他未来的妻子卡米耶·东西欧。深绿色的丝绸长裙在昏暗的画室中熠熠生辉，窗外的光线为她镀上一层金色的轮廓。这是莫奈第一次被光芒击中的时刻。',
-    l4_hint1: '← → 移动  ↑/空格 跳跃', l4_hint2: '靠近光源照亮隐藏的路', l4_hint3: '在黑暗中探索画室的秘密', l4_hint4: '收集颜料管解锁画框',
+    l4_hint1: '← → 移动  ↑/空格 跳跃', l4_hint2: '靠近光源照亮隐藏的路', l4_hint3: '在黑暗中，有些画架是开关——踩上去会出现新的路', l4_hint4: '收集颜料管解锁画框',
     sv_l4_1: '素描炭笔', sv_l4_2: '松节油瓶', sv_l4_3: '调色刀',
     sv_l4_4: '绿色丝绸布样', sv_l4_5: '沙龙邀请函',
     sv_l4_1_desc: '莫奈随身携带的炭笔，笔尖已被磨平。画室角落的素描本上留着卡米耶的速写轮廓。',
@@ -142,7 +142,7 @@ const LANG = {
     l5_name: '花园中的女人们', l5_subtitle: '1866 · 维尔达弗莱',
     l5_painting_title: '花园中的女人们 Women in the Garden', l5_artist: 'Claude Monet, 1866',
     l5_painting_desc: '为了捕捉户外真实的光线，莫奈在花园中挖了一条壕沟来安放巨幅画布。卡米耶一人扮演了画中的全部四位女性。风不时吹乱她的裙摆和帽子，阳光在树叶间跳跃。这是印象派户外写生精神的完美体现。',
-    l5_hint1: '注意风向，把握跳跃时机', l5_hint2: '风旗会提示风的方向', l5_hint3: '在风停的间隙快速前进', l5_hint4: '树枝在风中会摇摆',
+    l5_hint1: '注意风向，把握跳跃时机', l5_hint2: '有些树枝只在风起时才能踩上去', l5_hint3: '在风停的间隙快速前进', l5_hint4: '踩上发光的平台会出现新路径',
     sv_l5_1: '白色阳伞', sv_l5_2: '花冠', sv_l5_3: '丝绸缎带',
     sv_l5_4: '花园草帽', sv_l5_5: '蕾丝手套',
     sv_l5_1_desc: '卡米耶在花园里常用的白色蕾丝阳伞。伞面上能看到阳光透过蕾丝留下的斑驳花纹。',
@@ -204,7 +204,7 @@ const LANG = {
     l3_name: 'The Japanese Bridge', l3_nameEn: 'The Japanese Bridge', l3_subtitle: "1899 · Giverny Garden",
     l3_painting_title: 'The Japanese Bridge', l3_artist: 'Claude Monet, 1899',
     l3_painting_desc: "Monet built a Japanese-style arched bridge in his Giverny garden and painted it repeatedly. Rich greens, purples, and pinks intertwine as wisteria cascades from the bridge, merging with reflections on the water. This is Monet's late-period exploration of color and form — nature and art in perfect unity.",
-    l3_hint1: "Journey through Monet's secret garden", l3_hint2: 'Cross the Japanese Bridge for a panoramic view', l3_hint3: 'The end of the painting awaits you',
+    l3_hint1: "Journey through Monet's secret garden", l3_hint2: 'Under-bridge paths appear in Spring; vines shift with Summer and Autumn', l3_hint3: 'Watch for the seasons — different paths appear as they change',
     sv_l1_1: 'Purple Dream Pigment', sv_l1_2: 'Pink Petal Pigment', sv_l1_3: 'Water Lily Fragment',
     sv_l1_4: 'Lily Reflection Green', sv_l1_5: 'Reflection Fragment',
     sv_l1_1_desc: 'Purple pigment extracted from the surface of the lily pond. It shifts from blue to violet under different light — much like the reflections Monet spent decades capturing.',
@@ -251,7 +251,7 @@ const LANG = {
     l4_name: 'Woman in the Green Dress', l4_subtitle: '1866 · Paris Studio',
     l4_painting_title: 'Woman in the Green Dress', l4_artist: 'Claude Monet, 1866',
     l4_painting_desc: "This painting was Monet's breakthrough at the Salon. The model was Camille Doncieux, who would become his wife. Her deep green silk dress gleams in the dim studio, with window light tracing a golden outline around her silhouette. This was the moment Monet was first struck by light.",
-    l4_hint1: '← → Move  ↑/Space Jump', l4_hint2: 'Move near light to reveal hidden paths', l4_hint3: 'Explore the secrets of the dark studio', l4_hint4: 'Collect paint tubes to unlock the gate',
+    l4_hint1: '← → Move  ↑/Space Jump', l4_hint2: 'Move near light to reveal hidden paths', l4_hint3: 'Some easels are switches — step on them to reveal new paths', l4_hint4: 'Collect paint tubes to unlock the gate',
     sv_l4_1: 'Sketch Charcoal', sv_l4_2: 'Turpentine Bottle', sv_l4_3: 'Palette Knife',
     sv_l4_4: 'Green Silk Swatch', sv_l4_5: 'Salon Invitation',
     sv_l4_1_desc: 'Monet\'s well-worn charcoal stick, its tip ground flat. His sketchbook in the studio corner holds faint outlines of Camille\'s silhouette.',
@@ -269,7 +269,7 @@ const LANG = {
     l5_name: 'Women in the Garden', l5_subtitle: '1866 · Ville-d\'Avray',
     l5_painting_title: 'Women in the Garden', l5_artist: 'Claude Monet, 1866',
     l5_painting_desc: "To capture real outdoor light, Monet dug a trench in a garden to lower his enormous canvas. Camille posed as all four women. Wind kept blowing her dress and hat, sunlight danced between leaves. This painting embodies the Impressionist spirit of plein-air painting.",
-    l5_hint1: 'Watch the wind, time your jumps', l5_hint2: 'Wind flags show gust direction', l5_hint3: 'Move quickly between wind gusts', l5_hint4: 'Tree branches sway in the wind',
+    l5_hint1: 'Watch the wind, time your jumps', l5_hint2: 'Some branches only appear during wind gusts', l5_hint3: 'Move quickly between wind gusts', l5_hint4: 'Glowing platforms are switches — step on them to reveal new paths',
     sv_l5_1: 'White Parasol', sv_l5_2: 'Flower Crown', sv_l5_3: 'Silk Ribbon',
     sv_l5_4: 'Garden Hat', sv_l5_5: 'Lace Glove',
     sv_l5_1_desc: 'Camille\'s white lace parasol from the garden. Sunlight through the lace leaves dappled patterns on her face — a sight Monet painted many times.',
@@ -2213,10 +2213,15 @@ const LEVELS = [
       // --- Dark maze section: navigate between light zones ---
       { x: 1300, y: 350, w: 100, h: 18, type: 'frame' },
       { x: 1450, y: 300, w: 140, h: 22, type: 'shelf' },
+      // PUZZLE: light-only shelves — invisible in darkness, appear near lantern/light
+      { x: 1350, y: 230, w: 100, h: 18, type: 'frame', lightOnly: true },
+      { x: 1550, y: 180, w: 110, h: 18, type: 'frame', lightOnly: true },
       { x: 1600, y: 250, w: 80, h: 55, type: 'easel' },
       { x: 1500, y: 180, w: 100, h: 18, type: 'frame', move: { type: 'move', range: 80, speed: 0.5 } },
       { x: 1730, y: 320, w: 170, h: 22, type: 'shelf' },
       { x: 1880, y: 250, w: 70, h: 55, type: 'easel' },
+      // PUZZLE: trigger switch reveals hidden bridge to upper gallery
+      { x: 1900, y: 250, w: 70, h: 55, type: 'easel', trigger: 'L0_bridge' },
       { x: 1780, y: 160, w: 100, h: 18, type: 'frame' },
       { x: 1950, y: 120, w: 140, h: 20, type: 'shelf' },
       // --- Descent and horizontal gallery ---
@@ -2225,10 +2230,10 @@ const LEVELS = [
       { x: 2350, y: 360, w: 160, h: 22, type: 'shelf' },
       { x: 2520, y: 420, w: 100, h: 18, type: 'frame' },
       { x: 2650, y: 360, w: 140, h: 22, type: 'shelf' },
-      // --- Upper gallery route (optional, high) ---
-      { x: 2500, y: 250, w: 80, h: 55, type: 'easel' },
-      { x: 2650, y: 200, w: 100, h: 18, type: 'frame', move: { type: 'float', range: 8, speed: 0.7 } },
-      { x: 2800, y: 150, w: 120, h: 20, type: 'shelf' },
+      // --- Upper gallery route — UNLOCKED by trigger L0_bridge ---
+      { x: 2500, y: 250, w: 80, h: 55, type: 'easel', triggerTarget: 'L0_bridge' },
+      { x: 2650, y: 200, w: 100, h: 18, type: 'frame', triggerTarget: 'L0_bridge' },
+      { x: 2800, y: 150, w: 120, h: 20, type: 'shelf', triggerTarget: 'L0_bridge' },
       // --- Final approach ---
       { x: 2800, y: 420, w: 120, h: 22, type: 'shelf' },
       { x: 2960, y: 350, w: 70, h: 55, type: 'easel' },
@@ -2305,6 +2310,9 @@ const LEVELS = [
       // --- Descending section: go down into valley ---
       { x: 1200, y: 300, w: 100, h: 16, type: 'branch' },
       { x: 1100, y: 380, w: 140, h: 26, type: 'hedge' },
+      // PUZZLE: wind-only stepping stones — only solid during wind gusts
+      { x: 1280, y: 380, w: 90, h: 16, type: 'branch', windOnly: true },
+      { x: 1420, y: 400, w: 90, h: 16, type: 'branch', windOnly: true },
       { x: 1300, y: 450, w: 180, h: 24, type: 'hedge' },
       { x: 1500, y: 520, w: 200, h: 26, type: 'hedge' },
       // --- Valley floor with wind hazard ---
@@ -2318,9 +2326,13 @@ const LEVELS = [
       { x: 2230, y: 190, w: 120, h: 16, type: 'branch', move: { type: 'float', range: 5, speed: 0.8 } },
       { x: 2150, y: 130, w: 100, h: 16, type: 'branch' },
       { x: 2300, y: 100, w: 160, h: 20, type: 'hedge' },
-      // --- High canopy path (optional upper route) ---
-      { x: 2500, y: 120, w: 100, h: 16, type: 'branch', move: { type: 'move', range: 80, speed: 0.5 } },
+      // --- High canopy: TRIGGER unlocks shortcut bridge to finish ---
+      { x: 2300, y: 100, w: 160, h: 20, type: 'hedge', trigger: 'L1_canopy' },
+      { x: 2500, y: 120, w: 100, h: 16, type: 'branch', windOnly: true },
       { x: 2700, y: 150, w: 120, h: 16, type: 'branch' },
+      // --- Shortcut bridge (hidden until trigger) ---
+      { x: 2850, y: 200, w: 110, h: 16, type: 'branch', triggerTarget: 'L1_canopy' },
+      { x: 3000, y: 250, w: 110, h: 16, type: 'branch', triggerTarget: 'L1_canopy' },
       // --- Descent to finish ---
       { x: 2450, y: 250, w: 120, h: 20, type: 'bench' },
       { x: 2600, y: 320, w: 160, h: 26, type: 'hedge' },  // widened rest point
@@ -2401,9 +2413,12 @@ const LEVELS = [
       { x: 1450, y: 250, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 10, speed: 0.7 } },
       { x: 1400, y: 170, w: 100, h: 18, type: 'grass' },
       { x: 1500, y: 110, w: 90, h: 16, type: 'kite', move: { type: 'float', range: 12, speed: 0.5 } },
-      // --- Canyon gap: must glide across wide gap ---
+      // --- Canyon gap: PUZZLE — trigger pad on canyon floor reveals cloud bridge ---
       { x: 1650, y: 140, w: 100, h: 18, type: 'grass' },
-      { x: 1700, y: 400, w: 160, h: 22, type: 'grass' },   // canyon floor (safe landing)
+      { x: 1700, y: 400, w: 160, h: 22, type: 'grass', trigger: 'L2_canyon' },  // trigger on canyon floor
+      // Hidden cloud bridge across canyon (appears after trigger)
+      { x: 1800, y: 250, w: 80, h: 16, type: 'cloud', triggerTarget: 'L2_canyon' },
+      { x: 1920, y: 220, w: 80, h: 16, type: 'cloud', triggerTarget: 'L2_canyon' },
       { x: 1850, y: 320, w: 100, h: 18, type: 'grass' },
       // --- Fourth updraft: canyon escape ---
       { x: 1920, y: 240, w: 80, h: 16, type: 'cloud', move: { type: 'float', range: 14, speed: 0.6 } },
@@ -2483,9 +2498,11 @@ const LEVELS = [
       { x: 1050, y: 200, w: 130, h: 25, type: 'lily' },
       { x: 1200, y: 300, w: 160, h: 30, type: 'lily' },
       { x: 1350, y: 400, w: 140, h: 30, type: 'lily' },
-      // --- Lower pond section: horizontal with floating pads ---
+      // --- Lower pond: PUZZLE — trigger on high island reveals bridge to tower 3 ---
       { x: 1530, y: 480, w: 200, h: 35, type: 'lily' },
-      { x: 1770, y: 460, w: 160, h: 35, type: 'lily', move: {type:'float', range:20, speed:0.9} },
+      { x: 1770, y: 460, w: 160, h: 35, type: 'lily', move: {type:'float', range:20, speed:0.9}, trigger: 'L3_bridge' },
+      // Hidden lily bridge (appears after trigger)
+      { x: 1870, y: 430, w: 100, h: 25, type: 'lily', triggerTarget: 'L3_bridge' },
       { x: 1980, y: 480, w: 180, h: 35, type: 'lily' },
       // --- Third tower: mixed vertical challenge ---
       { x: 2050, y: 400, w: 120, h: 25, type: 'lily', disappear: { delay: 2.0, reform: 2.5 } },
@@ -2564,16 +2581,16 @@ const LEVELS = [
       { x: 1100, y: 420, w: 160, h: 30, type: 'boat', move: {type:'float', range:10, speed:1.0} },
       { x: 1300, y: 400, w: 140, h: 30, type: 'boat' },
       { x: 1480, y: 430, w: 170, h: 30, type: 'dock' },
-      // --- Crane tower: tall vertical structure ---
+      // --- Crane tower: PUZZLE — reach crane top to activate rigging ---
       { x: 1500, y: 370, w: 80, h: 20, type: 'mast' },
       { x: 1550, y: 300, w: 90, h: 18, type: 'mast' },
       { x: 1500, y: 230, w: 100, h: 18, type: 'mast' },
       { x: 1560, y: 160, w: 80, h: 18, type: 'mast' },
-      { x: 1510, y: 100, w: 110, h: 18, type: 'mast' },  // crane top
-      // --- High rigging path (optional upper route) ---
-      { x: 1680, y: 130, w: 100, h: 18, type: 'mast', move: {type:'float', range:8, speed:0.6} },
-      { x: 1850, y: 150, w: 90, h: 18, type: 'mast' },
-      { x: 2000, y: 180, w: 80, h: 18, type: 'mast', move: {type:'float', range:10, speed:0.5} },
+      { x: 1510, y: 100, w: 110, h: 18, type: 'mast', trigger: 'L4_crane' },  // crane top = trigger
+      // --- High rigging path — UNLOCKED by crane trigger ---
+      { x: 1680, y: 130, w: 100, h: 18, type: 'mast', triggerTarget: 'L4_crane' },
+      { x: 1850, y: 150, w: 90, h: 18, type: 'mast', triggerTarget: 'L4_crane' },
+      { x: 2000, y: 180, w: 80, h: 18, type: 'mast', triggerTarget: 'L4_crane' },
       // --- Lower route: boats and docks ---
       { x: 1700, y: 440, w: 180, h: 30, type: 'boat', move: {type:'float', range:10, speed:0.9} },
       { x: 1930, y: 420, w: 200, h: 35, type: 'dock' },
@@ -2641,15 +2658,14 @@ const LEVELS = [
       { x: 380, y: 150, w: 100, h: 18, type: 'vine', move: {type:'move', range:50, speed:0.4} },
 
       // === ZONE B: Under-Bridge Passage (x 600–1400) ===
-      // Low path beneath the arched bridge — hidden route
-      { x: 680, y: 530, w: 120, h: 35, type: 'stone' },
-      { x: 850, y: 540, w: 140, h: 30, type: 'stone' },
-      { x: 1030, y: 530, w: 130, h: 35, type: 'stone' },
-      { x: 1200, y: 520, w: 110, h: 30, type: 'stone' },
-      // Moving platform under bridge arch center
-      { x: 930, y: 490, w: 100, h: 25, type: 'stone', move: {type:'move', range:80, speed:0.6} },
+      // PUZZLE: under-bridge stones only exist in Spring (season 0-0.3)
+      { x: 680, y: 530, w: 120, h: 35, type: 'stone', seasonPhase: [0, 0.35] },
+      { x: 850, y: 540, w: 140, h: 30, type: 'stone', seasonPhase: [0, 0.35] },
+      { x: 1030, y: 530, w: 130, h: 35, type: 'stone', seasonPhase: [0, 0.35] },
+      { x: 1200, y: 520, w: 110, h: 30, type: 'stone', seasonPhase: [0, 0.35] },
+      { x: 930, y: 490, w: 100, h: 25, type: 'stone', move: {type:'move', range:80, speed:0.6}, seasonPhase: [0, 0.35] },
 
-      // === ZONE B: Bridge Deck (x 600–1400) — Main Route ===
+      // === ZONE B: Bridge Deck (x 600–1400) — Main Route (always visible) ===
       // Ascending arch left side
       { x: 620, y: 430, w: 130, h: 30, type: 'bridge' },
       { x: 780, y: 390, w: 150, h: 30, type: 'bridge' },
@@ -2678,14 +2694,14 @@ const LEVELS = [
       { x: 1700, y: 330, w: 100, h: 22, type: 'vine', move: {type:'float', range:22, speed:1.1} },
       { x: 1600, y: 260, w: 90, h: 22, type: 'vine' },
       { x: 1720, y: 190, w: 100, h: 22, type: 'vine' },
-      // Wisteria hanging platforms (mid-height connections)
-      { x: 1880, y: 380, w: 110, h: 22, type: 'vine', move: {type:'move', range:70, speed:0.45} },
-      { x: 2060, y: 350, w: 100, h: 22, type: 'vine' },
-      { x: 2200, y: 390, w: 120, h: 22, type: 'vine' },
-      // High wisteria canopy (narrow — expert-level precision)
-      { x: 1850, y: 220, w: 75, h: 18, type: 'vine' },
-      { x: 2010, y: 180, w: 65, h: 18, type: 'vine', move: {type:'move', range:50, speed:0.55} },
-      { x: 2170, y: 210, w: 80, h: 18, type: 'vine' },
+      // Wisteria hanging platforms — PUZZLE: Summer-only path (season 0.25-0.75)
+      { x: 1880, y: 380, w: 110, h: 22, type: 'vine', move: {type:'move', range:70, speed:0.45}, seasonPhase: [0.25, 0.75] },
+      { x: 2060, y: 350, w: 100, h: 22, type: 'vine', seasonPhase: [0.25, 0.75] },
+      { x: 2200, y: 390, w: 120, h: 22, type: 'vine' },  // always solid — landing point
+      // High wisteria canopy — PUZZLE: Autumn-only path (season 0.65-1.0)
+      { x: 1850, y: 220, w: 75, h: 18, type: 'vine', seasonPhase: [0.65, 1.0] },
+      { x: 2010, y: 180, w: 65, h: 18, type: 'vine', move: {type:'move', range:50, speed:0.55}, seasonPhase: [0.65, 1.0] },
+      { x: 2170, y: 210, w: 80, h: 18, type: 'vine', seasonPhase: [0.65, 1.0] },
 
       // === ZONE D: Torii Gate Ascent & Finale (x 2300–3400) ===
       // Ground stepping stones
@@ -2920,6 +2936,7 @@ const Game = {
     this.tidalWaterY = 600;
     this.tidalGraceTimer = 3.5; // grace period: no tidal death for 3.5s after level start
     this.seasonProgress = 0;
+    this._triggeredGroups = {}; // reset puzzle trigger states
 
     // Reset voiceover system
     VoiceoverSystem.reset(idx);
@@ -3672,8 +3689,64 @@ const Game = {
       }
     }
 
-    // Update player
-    this.player.update(dt, this.platforms.filter(p => !p._noCollision && !p.submerged));
+    // === PUZZLE MECHANICS: update platform visibility states ===
+
+    // Trigger/switch system: standing on a trigger platform reveals linked targets
+    if (!this._triggeredGroups) this._triggeredGroups = {};
+    for (const p of this.platforms) {
+      if (p.trigger) {
+        const playerOn = this.player.onGround &&
+          this.player.x + this.player.w > p.x && this.player.x < p.x + p.w &&
+          Math.abs((this.player.y + this.player.h) - p.y) < 5;
+        if (playerOn && !this._triggeredGroups[p.trigger]) {
+          this._triggeredGroups[p.trigger] = true;
+          AudioEngine.playCollect(); // trigger activation sound
+        }
+      }
+    }
+
+    // Update puzzle-state flags on each platform
+    for (const p of this.platforms) {
+      // Wind-only platforms: solid only during wind gusts
+      if (p.windOnly) {
+        p._puzzleHidden = !this.windActive;
+      }
+      // Season-phase platforms: solid only when seasonProgress is in range
+      if (p.seasonPhase) {
+        const sp = this.seasonProgress || 0;
+        p._puzzleHidden = sp < p.seasonPhase[0] || sp > p.seasonPhase[1];
+      }
+      // Light-only platforms: solid only near light zones or player lantern
+      if (p.lightOnly && level.lightZones) {
+        const px = p.x + p.w / 2;
+        const py = p.y + p.h / 2;
+        const plx = this.player.x + this.player.w / 2;
+        const ply = this.player.y + this.player.h / 2;
+        const lanternR = 140;
+        const nearPlayer = Math.hypot(px - plx, py - ply) < lanternR;
+        const nearLight = level.lightZones.some(lz => {
+          const lr = lz.radius || lz.r || 200;
+          return Math.hypot(px - lz.x, py - lz.y) < lr * 0.7;
+        });
+        p._puzzleHidden = !nearPlayer && !nearLight;
+      }
+      // Trigger-target platforms: hidden until their trigger group is activated
+      if (p.triggerTarget) {
+        p._puzzleHidden = !this._triggeredGroups[p.triggerTarget];
+      }
+      // Smooth alpha transitions for puzzle platforms
+      if (p._puzzleHidden !== undefined) {
+        if (p._puzzleAlpha === undefined) p._puzzleAlpha = p._puzzleHidden ? 0 : 1;
+        const target = p._puzzleHidden ? 0 : 1;
+        p._puzzleAlpha += (target - p._puzzleAlpha) * Math.min(1, dt * 6);
+      }
+    }
+
+    // Update player — filter out non-collidable platforms
+    this.player.update(dt, this.platforms.filter(p =>
+      !p._noCollision && !p.submerged &&
+      !(p._puzzleHidden) // puzzle-hidden platforms have no collision
+    ));
 
     // Camera follow
     const targetCamX = this.player.x - this.viewW * 0.35;
@@ -4686,6 +4759,52 @@ const Game = {
     const colors = level.colors;
     const t = this.time;
 
+    // === PUZZLE PLATFORM RENDERING ===
+    // Platforms with puzzle properties get special visual treatment
+    if (p._puzzleAlpha !== undefined) {
+      const pa = p._puzzleAlpha;
+      if (pa < 0.01) return; // fully hidden — don't draw at all
+      ctx.save();
+      ctx.globalAlpha = pa * 0.3 + (pa > 0.5 ? (pa - 0.5) * 1.4 : 0);
+      // Ghost outline when fading
+      if (pa < 0.9) {
+        const cx = p.x + p.w / 2;
+        const cy = p.y + p.h / 2;
+        ctx.strokeStyle = p.windOnly ? 'rgba(200,220,255,0.4)' :
+                          p.seasonPhase ? 'rgba(180,255,180,0.4)' :
+                          p.lightOnly ? 'rgba(255,230,160,0.4)' :
+                          'rgba(220,200,255,0.4)';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([4, 4]);
+        ctx.strokeRect(p.x, p.y, p.w, p.h);
+        ctx.setLineDash([]);
+      }
+    }
+
+    // Trigger platform glow indicator
+    if (p.trigger && !this._triggeredGroups[p.trigger]) {
+      const cx = p.x + p.w / 2;
+      const cy = p.y - 8;
+      const pulse = 0.5 + 0.3 * Math.sin(t * 3);
+      ctx.save();
+      ctx.globalCompositeOperation = 'screen';
+      const tg = ctx.createRadialGradient(cx, cy, 1, cx, cy, 18);
+      tg.addColorStop(0, `rgba(220,200,255,${pulse * 0.6})`);
+      tg.addColorStop(1, 'rgba(220,200,255,0)');
+      ctx.fillStyle = tg;
+      ctx.fillRect(cx - 18, cy - 18, 36, 36);
+      // Diamond symbol
+      ctx.fillStyle = `rgba(220,200,255,${pulse})`;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy - 6);
+      ctx.lineTo(cx + 4, cy);
+      ctx.lineTo(cx, cy + 6);
+      ctx.lineTo(cx - 4, cy);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
     // Handle disappearing platform alpha
     if (p._disappearAlpha !== undefined && p._disappearAlpha < 1) {
       ctx.save();
@@ -5081,6 +5200,10 @@ const Game = {
       ctx.restore();
     }
     if (p._disappearAlpha !== undefined && p._disappearAlpha < 1) {
+      ctx.restore();
+    }
+    // Restore puzzle platform alpha
+    if (p._puzzleAlpha !== undefined) {
       ctx.restore();
     }
 
